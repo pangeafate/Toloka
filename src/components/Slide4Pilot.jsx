@@ -1,7 +1,15 @@
 import React from 'react'
-import { Box, Gauge, Package, Clock, HandMetal } from 'lucide-react'
+import { Compass, Box, Gauge, Clock, HandMetal } from 'lucide-react'
 
 export default function Slide4Pilot() {
+  const requirementCategories = [
+    'Architectural',
+    'Domain-specific',
+    'Training & eval',
+    'Scalability',
+    'Infrastructure',
+  ]
+
   const buildSlice = [
     'A small set of databases',
     'A small set of tools',
@@ -30,7 +38,7 @@ export default function Slide4Pilot() {
         <div>
           <div className="section-eyebrow">Pilot</div>
           <h1 style={{ fontSize: '2.6rem', fontWeight: 800, letterSpacing: '-0.01em', lineHeight: 1.1 }}>
-            What we build in <span style={{ color: 'var(--accent-blue)' }}>10–14 weeks</span>
+            Four modules over <span style={{ color: 'var(--accent-blue)' }}>10–14 weeks</span>
           </h1>
         </div>
         <span className="toloka-pill orange">
@@ -41,11 +49,29 @@ export default function Slide4Pilot() {
       <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1.25rem', flex: 1 }}>
 
         <Quadrant
-          icon={Box}
-          eyebrow="What we build first"
+          icon={Compass}
+          eyebrow="Module 1 · Discovery & requirements alignment · 2–3 wks"
           color="var(--accent-blue)"
         >
-          <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: '0.55rem' }}>
+          <p style={{ fontSize: '0.9rem', color: 'var(--text-secondary)', lineHeight: 1.45 }}>
+            Agree the project requirements with you across five categories before any code is written:
+          </p>
+          <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.35rem', marginTop: '0.6rem' }}>
+            {requirementCategories.map((c) => (
+              <span key={c} className="toloka-pill blue" style={{ fontSize: '0.72rem' }}>{c}</span>
+            ))}
+          </div>
+          <p style={{ fontSize: '0.7rem', color: 'var(--text-muted)', marginTop: '0.65rem', lineHeight: 1.4, fontStyle: 'italic' }}>
+            Output: workflow map · policy map · API/tool spec · benchmark taxonomy · environment architecture.
+          </p>
+        </Quadrant>
+
+        <Quadrant
+          icon={Box}
+          eyebrow="Modules 2–4 · Build, tasks, validation · ~8–11 wks"
+          color="var(--accent-coral)"
+        >
+          <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: '0.4rem' }}>
             {buildSlice.map((b) => (
               <li
                 key={b}
@@ -53,12 +79,12 @@ export default function Slide4Pilot() {
                   display: 'flex',
                   alignItems: 'center',
                   gap: '0.6rem',
-                  fontSize: '1rem',
+                  fontSize: '0.92rem',
                   color: 'var(--text-primary)',
                   fontWeight: 500,
                 }}
               >
-                <span style={{ width: '0.45rem', height: '0.45rem', borderRadius: '50%', background: 'var(--accent-blue)' }} />
+                <span style={{ width: '0.4rem', height: '0.4rem', borderRadius: '50%', background: 'var(--accent-coral)' }} />
                 {b}
               </li>
             ))}
@@ -67,7 +93,7 @@ export default function Slide4Pilot() {
 
         <Quadrant
           icon={Gauge}
-          eyebrow="The four numbers it measures"
+          eyebrow="Four numbers measured"
           color="var(--accent-green)"
         >
           <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '0.5rem' }}>
@@ -118,43 +144,36 @@ export default function Slide4Pilot() {
         </Quadrant>
 
         <Quadrant
-          icon={Package}
-          eyebrow="Deliverables"
-          color="var(--accent-coral)"
-        >
-          <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: '0.55rem' }}>
-            {deliverables.map((d) => (
-              <li
-                key={d}
-                style={{
-                  display: 'flex',
-                  alignItems: 'center',
-                  gap: '0.6rem',
-                  fontSize: '1rem',
-                  color: 'var(--text-primary)',
-                  fontWeight: 500,
-                }}
-              >
-                <span style={{ width: '0.45rem', height: '0.45rem', borderRadius: '50%', background: 'var(--accent-coral)' }} />
-                {d}
-              </li>
-            ))}
-          </ul>
-        </Quadrant>
-
-        <Quadrant
           icon={HandMetal}
-          eyebrow="Ask in the room"
+          eyebrow="Ask in the room · what you receive at the gate"
           color="var(--accent-blue)"
           highlight
         >
-          <p style={{ fontSize: '1.05rem', color: 'var(--text-primary)', lineHeight: 1.4, fontWeight: 500 }}>
+          <p style={{ fontSize: '1rem', color: 'var(--text-primary)', lineHeight: 1.4, fontWeight: 500 }}>
             <strong>Confirm the scope of this first build</strong>, or adjust it now.
           </p>
-          <p style={{ fontSize: '0.85rem', color: 'var(--text-muted)', marginTop: '0.5rem', lineHeight: 1.4 }}>
-            Indicative duration <strong style={{ color: 'var(--text-primary)' }}>10–14 weeks</strong> from kick-off.
-            The pilot turns the range into a firm number at the gate.
-          </p>
+          <div style={{ marginTop: '0.65rem', paddingTop: '0.6rem', borderTop: '1px solid rgba(3,109,85,0.2)' }}>
+            <span style={{ fontSize: '0.62rem', fontWeight: 700, letterSpacing: '0.14em', textTransform: 'uppercase', color: 'var(--accent-green)', display: 'block', marginBottom: '0.35rem' }}>
+              You receive at the pilot gate
+            </span>
+            <ul style={{ listStyle: 'none', display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '0.25rem 0.85rem' }}>
+              {deliverables.map((d) => (
+                <li
+                  key={d}
+                  style={{
+                    display: 'flex',
+                    alignItems: 'center',
+                    gap: '0.45rem',
+                    fontSize: '0.78rem',
+                    color: 'var(--text-primary)',
+                  }}
+                >
+                  <span style={{ width: '0.35rem', height: '0.35rem', borderRadius: '50%', background: 'var(--accent-green)' }} />
+                  {d}
+                </li>
+              ))}
+            </ul>
+          </div>
         </Quadrant>
 
       </div>
@@ -169,7 +188,7 @@ function Quadrant({ icon: Icon, eyebrow, color, children, highlight }) {
       style={{
         display: 'flex',
         flexDirection: 'column',
-        gap: '0.85rem',
+        gap: '0.7rem',
         background: highlight ? 'var(--bg-callout-green)' : 'var(--bg-card)',
         borderColor: highlight ? 'rgba(3,109,85,0.25)' : 'var(--border-light)',
       }}
@@ -185,11 +204,12 @@ function Quadrant({ icon: Icon, eyebrow, color, children, highlight }) {
             display: 'inline-flex',
             alignItems: 'center',
             justifyContent: 'center',
+            flexShrink: 0,
           }}
         >
           <Icon size={16} color={color} />
         </span>
-        <span style={{ fontSize: '0.7rem', fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', color }}>
+        <span style={{ fontSize: '0.7rem', fontWeight: 700, letterSpacing: '0.1em', textTransform: 'uppercase', color, lineHeight: 1.25 }}>
           {eyebrow}
         </span>
       </div>

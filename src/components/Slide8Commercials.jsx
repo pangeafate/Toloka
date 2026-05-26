@@ -33,12 +33,15 @@ export default function Slide8Commercials() {
             <span className="section-eyebrow" style={{ color: 'var(--accent-green)', marginBottom: 0 }}>Pilot</span>
           </div>
           <h2 style={{ fontSize: '2.5rem', fontWeight: 800, color: 'var(--text-primary)', letterSpacing: '-0.02em', lineHeight: 1, marginBottom: '0.3rem' }}>
-            Fixed price
+            $370k&ndash;$620k
           </h2>
-          <p style={{ fontSize: '0.95rem', color: 'var(--text-primary)', lineHeight: 1.45, marginTop: '0.6rem' }}>
-            10–14 weeks. The first build, end to end. Deliverables and four measured numbers, on a known budget.
+          <span style={{ fontSize: '0.78rem', fontWeight: 600, color: 'var(--accent-green)', letterSpacing: '0.03em' }}>
+            Range today &middot; fixed as a single number in the pilot SOW
+          </span>
+          <p style={{ fontSize: '0.92rem', color: 'var(--text-primary)', lineHeight: 1.45, marginTop: '0.7rem' }}>
+            10&ndash;14 weeks. The first build, end to end. Deliverables and four measured numbers, on a known budget.
           </p>
-          <div style={{ display: 'flex', gap: '0.4rem', marginTop: '1rem', flexWrap: 'wrap' }}>
+          <div style={{ display: 'flex', gap: '0.4rem', marginTop: '0.85rem', flexWrap: 'wrap' }}>
             <span className="toloka-pill green">Runnable build</span>
             <span className="toloka-pill green">Stress-test</span>
             <span className="toloka-pill green">QA + baseline</span>
@@ -66,12 +69,15 @@ export default function Slide8Commercials() {
             <span className="section-eyebrow" style={{ marginBottom: 0 }}>Scaling</span>
           </div>
           <h2 style={{ fontSize: '2.5rem', fontWeight: 800, color: 'var(--text-primary)', letterSpacing: '-0.02em', lineHeight: 1, marginBottom: '0.3rem' }}>
-            Range → firm
+            $355k&ndash;$925k
           </h2>
-          <p style={{ fontSize: '0.95rem', color: 'var(--text-primary)', lineHeight: 1.45, marginTop: '0.6rem' }}>
+          <span style={{ fontSize: '0.78rem', fontWeight: 600, color: 'var(--accent-blue)', letterSpacing: '0.03em' }}>
+            Range today &middot; firms after the pilot gate
+          </span>
+          <p style={{ fontSize: '0.92rem', color: 'var(--text-primary)', lineHeight: 1.45, marginTop: '0.7rem' }}>
             A range at SOW. <strong>The pilot&rsquo;s three driving numbers turn it into a firm number</strong> at the gate.
           </p>
-          <div style={{ marginTop: '1rem' }}>
+          <div style={{ marginTop: '0.85rem' }}>
             <span style={{ fontSize: '0.7rem', fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', color: 'var(--text-muted)' }}>
               Three drivers
             </span>
@@ -116,9 +122,17 @@ export default function Slide8Commercials() {
             </span>
           </div>
         </div>
-        <span style={{ fontSize: '0.8rem', color: 'var(--text-muted)', fontStyle: 'italic' }}>
-          Per-domain cost curve → Appendix A10
-        </span>
+        <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-end' }}>
+          <span style={{ fontSize: '0.65rem', fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', color: 'var(--text-muted)' }}>
+            Total today
+          </span>
+          <span style={{ fontSize: '1.05rem', fontWeight: 800, color: 'var(--text-primary)', letterSpacing: '-0.01em' }}>
+            $725k&ndash;$1.54M
+          </span>
+          <span style={{ fontSize: '0.7rem', color: 'var(--text-muted)', fontStyle: 'italic' }}>
+            Per-domain cost curve &rarr; Appendix A10
+          </span>
+        </div>
       </div>
     </div>
   )

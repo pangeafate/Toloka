@@ -5,10 +5,10 @@ export default function Slide2Purpose() {
   const pillars = [
     {
       n: '01',
-      title: 'Pilot scope',
-      lede: 'What the pilot builds: a working environment, the tools the agent uses, the rules it must follow, and the system that scores its work.',
-      includes: ['Pilot SOW', '10–14 weeks', '$370–620k', '~50–100 tasks'],
-      ask: 'Confirm or adjust which workflows and how much policy detail we cover.',
+      title: 'Pilot scope, aligned across five requirement categories',
+      lede: 'What the pilot builds — 10–14 weeks, $370–620k — agreed by working through five categories of project requirements with you in Module 1.',
+      includes: ['Architectural', 'Domain-specific', 'Training & eval', 'Scalability', 'Infrastructure'],
+      ask: 'Confirm the category coverage and flag any non-negotiables we should know now.',
     },
     {
       n: '02',
@@ -19,10 +19,10 @@ export default function Slide2Purpose() {
     },
     {
       n: '03',
-      title: 'Team setup and ways of working',
-      lede: 'Who does what on both sides, when we meet, and how we escalate when we get stuck.',
+      title: 'Work allocation and ways of working',
+      lede: 'Who does what on both sides, when we meet, and three work-allocation decisions to settle today.',
       includes: ['PM · Tech Lead · Workforce Manager', 'Weekly working · biweekly steering', '3-level escalation'],
-      ask: 'Your counterparts named — technical, policy, executive sponsor.',
+      ask: 'Counterparts named, plus three work-allocation decisions: who authors policy · the integration interface · who runs ongoing evaluation.',
     },
   ]
 
