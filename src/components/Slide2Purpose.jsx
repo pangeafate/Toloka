@@ -171,7 +171,7 @@ export default function Slide2Purpose() {
         ))}
       </div>
 
-      {/* ── Agenda + outcome ────────────────────────────────── */}
+      {/* ── Agenda + outcome (hidden per request — kept in source) ──
       <div>
         <div
           style={{
@@ -185,7 +185,7 @@ export default function Slide2Purpose() {
             How the 30 minutes are spent
           </span>
           <span style={{ fontSize: '0.75rem', color: 'var(--text-muted)' }}>
-            Appendix held in reserve &mdash; 13 deep dives indexed at A0, pulled up on request
+            Appendix held in reserve — 13 deep dives indexed at A0, pulled up on request
           </span>
         </div>
 
@@ -241,10 +241,11 @@ export default function Slide2Purpose() {
           <span style={{ fontWeight: 700, color: 'var(--text-heading)' }}>End of today</span>
           <ArrowRight size={14} color="var(--accent-blue)" />
           <span style={{ color: 'var(--text-primary)' }}>
-            kick-off date set &middot; pilot SOW ready to sign
+            kick-off date set · pilot SOW ready to sign
           </span>
         </div>
       </div>
+      ── end hidden section ── */}
     </div>
   )
 }
