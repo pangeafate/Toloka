@@ -7,13 +7,14 @@ export default function Slide4Pilot() {
     'A small set of tools',
     'Part of the full policy',
     'A complete reward loop, end to end',
+    '50–100 accepted benchmark tasks',
   ]
 
   const numbers = [
-    { label: 'Acceptance rate',    sub: '% of authored tasks passing all 8 gates' },
-    { label: 'Policy complexity',  sub: 'Branching depth per task' },
-    { label: 'Ambiguity rate',     sub: '% requiring SME clarification' },
-    { label: 'Signal reliability', sub: 'Reward variance under perturbation' },
+    { label: 'Acceptance rate',    sub: '% of authored tasks passing all 8 gates', role: 'driver' },
+    { label: 'Policy complexity',  sub: 'Branching depth per task',                  role: 'driver' },
+    { label: 'Ambiguity rate',     sub: '% requiring SME clarification',             role: 'driver' },
+    { label: 'Signal reliability', sub: 'Reward variance under perturbation',        role: 'gate'   },
   ]
 
   const deliverables = [
@@ -70,27 +71,50 @@ export default function Slide4Pilot() {
           color="var(--accent-green)"
         >
           <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '0.5rem' }}>
-            {numbers.map((n, i) => (
-              <div
-                key={n.label}
-                style={{
-                  background: 'var(--bg-secondary)',
-                  border: '1px solid var(--border-light)',
-                  borderRadius: '0.5rem',
-                  padding: '0.6rem 0.75rem',
-                  display: 'flex',
-                  flexDirection: 'column',
-                  gap: '0.15rem',
-                }}
-              >
-                <span style={{ fontSize: '0.65rem', fontWeight: 700, color: 'var(--accent-green)', letterSpacing: '0.08em' }}>
-                  N{(i + 1).toString().padStart(2, '0')}
-                </span>
-                <span style={{ fontSize: '0.85rem', fontWeight: 700, color: 'var(--text-primary)', lineHeight: 1.2 }}>{n.label}</span>
-                <span style={{ fontSize: '0.7rem', color: 'var(--text-muted)', lineHeight: 1.3 }}>{n.sub}</span>
-              </div>
-            ))}
+            {numbers.map((n, i) => {
+              const isDriver = n.role === 'driver'
+              return (
+                <div
+                  key={n.label}
+                  style={{
+                    background: 'var(--bg-secondary)',
+                    border: '1px solid var(--border-light)',
+                    borderRadius: '0.5rem',
+                    padding: '0.6rem 0.75rem',
+                    display: 'flex',
+                    flexDirection: 'column',
+                    gap: '0.15rem',
+                  }}
+                >
+                  <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: '0.35rem' }}>
+                    <span style={{ fontSize: '0.65rem', fontWeight: 700, color: 'var(--accent-green)', letterSpacing: '0.08em' }}>
+                      N{(i + 1).toString().padStart(2, '0')}
+                    </span>
+                    <span
+                      style={{
+                        fontSize: '0.55rem',
+                        fontWeight: 700,
+                        letterSpacing: '0.08em',
+                        textTransform: 'uppercase',
+                        padding: '0.1rem 0.4rem',
+                        borderRadius: '0.25rem',
+                        background: isDriver ? 'rgba(0,105,255,0.10)' : 'rgba(3,109,85,0.12)',
+                        color: isDriver ? 'var(--accent-blue)' : 'var(--accent-green)',
+                        border: `1px solid ${isDriver ? 'rgba(0,105,255,0.25)' : 'rgba(3,109,85,0.25)'}`,
+                      }}
+                    >
+                      {isDriver ? 'Cost driver' : 'Quality gate'}
+                    </span>
+                  </div>
+                  <span style={{ fontSize: '0.85rem', fontWeight: 700, color: 'var(--text-primary)', lineHeight: 1.2 }}>{n.label}</span>
+                  <span style={{ fontSize: '0.7rem', color: 'var(--text-muted)', lineHeight: 1.3 }}>{n.sub}</span>
+                </div>
+              )
+            })}
           </div>
+          <p style={{ fontSize: '0.7rem', color: 'var(--text-muted)', marginTop: '0.55rem', lineHeight: 1.4, fontStyle: 'italic' }}>
+            Four measured · three drive the commercial range · one is the quality gate. Picked up again on Slide 8.
+          </p>
         </Quadrant>
 
         <Quadrant

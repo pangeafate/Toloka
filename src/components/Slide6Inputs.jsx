@@ -1,5 +1,5 @@
 import React from 'react'
-import { FileCode2, Library, Users, Stamp, AlertTriangle } from 'lucide-react'
+import { FileCode2, Library, Users, Stamp, AlertTriangle, Network, RefreshCw } from 'lucide-react'
 
 export default function Slide6Inputs() {
   const inputs = [
@@ -110,6 +110,21 @@ export default function Slide6Inputs() {
         })}
       </div>
 
+      <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '0.75rem' }}>
+        <DecisionCard
+          icon={Network}
+          eyebrow="Scope decision"
+          title="How many parties do we simulate?"
+          body="Food Delivery has four — Users · Restaurants · Couriers · Platforms. Each one we include adds workflow surface and cost. Pilot locks how many and to what depth; rest defers to scaling."
+        />
+        <DecisionCard
+          icon={RefreshCw}
+          eyebrow="Commercial decision"
+          title="Evaluation-as-a-service: yes or no?"
+          body="Toloka maintains benchmark integrity, hidden eval, and anti-gaming on an ongoing basis — rather than handing the eval set over at delivery. Changes Slide 8."
+        />
+      </div>
+
       <div
         style={{
           display: 'flex',
@@ -126,6 +141,43 @@ export default function Slide6Inputs() {
           <strong style={{ color: 'var(--accent-coral)' }}>Honest framing:</strong> if these slip, kick-off slips equivalently — said plainly because it matters.
         </p>
       </div>
+    </div>
+  )
+}
+
+function DecisionCard({ icon: Icon, eyebrow, title, body }) {
+  return (
+    <div
+      style={{
+        background: 'var(--bg-card)',
+        border: '1px solid var(--border-blue)',
+        borderRadius: '0.625rem',
+        padding: '0.85rem 1rem',
+        display: 'flex',
+        flexDirection: 'column',
+        gap: '0.35rem',
+      }}
+    >
+      <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+        <Icon size={14} color="var(--accent-blue)" />
+        <span
+          style={{
+            fontSize: '0.6rem',
+            fontWeight: 700,
+            letterSpacing: '0.12em',
+            textTransform: 'uppercase',
+            color: 'var(--accent-blue)',
+          }}
+        >
+          {eyebrow}
+        </span>
+      </div>
+      <span style={{ fontSize: '0.95rem', fontWeight: 700, color: 'var(--text-primary)', lineHeight: 1.25 }}>
+        {title}
+      </span>
+      <span style={{ fontSize: '0.75rem', color: 'var(--text-muted)', lineHeight: 1.4 }}>
+        {body}
+      </span>
     </div>
   )
 }

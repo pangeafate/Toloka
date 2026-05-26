@@ -43,8 +43,9 @@ export default function Slide3Spine() {
             lineHeight: 1.5,
           }}
         >
-          A Food Delivery environment for training and evaluation. Tau-bench compatible.
-          Built so the next domain costs less.
+          A Food Delivery environment for training and evaluation. Built to plug into your existing
+          Tau-bench ecosystem — comparable metrics, reusable task structures, standardised tool formats.
+          And built so the next domain costs less.
         </p>
       </div>
 
@@ -78,6 +79,19 @@ export default function Slide3Spine() {
               )
             })}
           </div>
+          <p
+            style={{
+              fontSize: '0.78rem',
+              color: 'var(--text-muted)',
+              marginTop: '0.85rem',
+              lineHeight: 1.45,
+              fontStyle: 'italic',
+            }}
+          >
+            Primary use is RL. Accepted tasks ship with reference trajectories that double as
+            <strong style={{ color: 'var(--text-primary)', fontStyle: 'normal' }}> SFT warm-start data</strong>
+            &nbsp;— secondary deliverable, no extra authoring cost.
+          </p>
         </div>
 
         <div className="toloka-card-flat" style={{ padding: '1.75rem 2rem' }}>

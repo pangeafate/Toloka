@@ -51,19 +51,19 @@
 }
 
 /*
- * Responsive root font-size.
+ * Responsive root font-size — slide-deck scale (30% larger than web default).
  * 1rem scales with the viewport so every rem-based size in every slide
- * adapts automatically to the viewer's screen. Smaller of "1.5% of viewport
- * height" and "0.85% of viewport width" (16:9-matched), clamped to a sensible
- * min/max so text stays legible on extreme sizes.
+ * adapts automatically to the viewer's screen. Smaller of "1.95% of viewport
+ * height" and "1.1% of viewport width" (16:9-matched), clamped so text stays
+ * legible on extreme sizes.
  *
- * At 1920x1080 → ~16.2px (matches browser default)
- * At 1366x 768 → ~11.5px (laptop)
- * At 2560x1440 → ~21.6px (large monitor)
- * At 3840x2160 → ~24px   (clamped)
+ * At 1920x1080 → ~21.1px (slide-deck body text)
+ * At 1366x 768 → ~15.0px (laptop — still readable)
+ * At 2560x1440 → ~28.0px (large monitor)
+ * At 3840x2160 → ~31px   (clamped)
  */
 html {
-  font-size: clamp(10px, min(1.5vh, 0.85vw), 24px);
+  font-size: clamp(13px, min(1.95vh, 1.1vw), 31px);
   overscroll-behavior: none;
 }
 
