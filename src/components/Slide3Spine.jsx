@@ -2,33 +2,34 @@ import React from 'react'
 import {
   Database,
   Wrench,
-  Brain,
   UserRound,
   Target,
+  BookOpenCheck,
+  ChevronUp,
+  Cpu,
   ArrowUpRight,
 } from 'lucide-react'
 
 export default function Slide3Spine({ onOpenAppendix }) {
   const nodes = [
     { icon: UserRound, label: 'Simulated customer', annotation: 'Goal-driven user model' },
-    { icon: Brain,     label: 'Policy',             annotation: 'Agent under training' },
     { icon: Wrench,    label: 'Tools',              annotation: 'Stateful APIs' },
     { icon: Database,  label: 'Resettable env',     annotation: 'State + reset' },
     { icon: Target,    label: 'Reward logic',       annotation: 'Scored evaluator' },
   ]
 
-  const arrows = ['dialogue', 'tool calls', 'state mutation', 'trajectory']
+  const arrows = ['intent', 'state mutation', 'trajectory']
 
   const criteria = [
-    { label: 'Accepted task volume',     target: '≥ 50 in pilot · 200–300 scaled', emphasis: true },
-    { label: 'Pass^k consistency',       target: '≥ 80% at k=3, held-out',         emphasis: true },
+    { label: 'Accepted task volume',      target: '≥ 50 in pilot · 200–300 scaled', emphasis: true },
+    { label: 'Pass^k consistency',        target: '≥ 80% at k=3, held-out',         emphasis: true },
     { label: 'Reward signal reliability', target: '≤ 5% mis-score, audit set' },
-    { label: 'Policy coverage depth',    target: '≥ 90% policy paths exercised' },
-    { label: 'Eval-set freshness',       target: '≥ 20% novel tasks / cycle' },
+    { label: 'Policy coverage depth',     target: '≥ 90% policy paths exercised' },
+    { label: 'Eval-set freshness',        target: '≥ 20% novel tasks / cycle' },
   ]
 
   return (
-    <div className="toloka-slide" style={{ justifyContent: 'space-between', gap: '1.25rem' }}>
+    <div className="toloka-slide" style={{ justifyContent: 'space-between', gap: '1rem' }}>
       {/* ─── Header ─── */}
       <div>
         <div className="section-eyebrow">Approach</div>
@@ -54,9 +55,10 @@ export default function Slide3Spine({ onOpenAppendix }) {
             lineHeight: 1.5,
           }}
         >
-          Workflows, policies, and tasks are bespoke per domain — everything else reuses from domain two
-          onwards. Accepted-task trajectories double as <strong style={{ color: 'var(--text-primary)' }}>SFT
-          warm-start data</strong> — secondary deliverable, no extra authoring cost.
+          Workflows, business policies, and tasks are bespoke per domain — everything else reuses from
+          domain two onwards. Accepted-task trajectories double as{' '}
+          <strong style={{ color: 'var(--text-primary)' }}>SFT warm-start data</strong> — secondary
+          deliverable, no extra authoring cost.
         </p>
       </div>
 
@@ -67,7 +69,7 @@ export default function Slide3Spine({ onOpenAppendix }) {
             display: 'flex',
             alignItems: 'baseline',
             justifyContent: 'space-between',
-            marginBottom: '0.85rem',
+            marginBottom: '0.7rem',
           }}
         >
           <div className="section-eyebrow" style={{ marginBottom: 0 }}>
@@ -96,10 +98,31 @@ export default function Slide3Spine({ onOpenAppendix }) {
           </button>
         </div>
 
+        {/* Agent placeholder banner — clarifies that the agent isn't part of the deliverable */}
+        <div
+          style={{
+            display: 'flex',
+            alignItems: 'center',
+            gap: '0.55rem',
+            padding: '0.55rem 0.9rem',
+            border: '1px dashed var(--border-stronger)',
+            borderRadius: '0.55rem',
+            background: 'rgba(52, 52, 52, 0.03)',
+            marginBottom: '0.7rem',
+          }}
+        >
+          <Cpu size={14} color="var(--text-secondary)" />
+          <span style={{ fontSize: '0.78rem', color: 'var(--text-secondary)', lineHeight: 1.4 }}>
+            <strong style={{ color: 'var(--text-primary)' }}>Your agent (LLM under training) plugs in here</strong>
+            {' '}— drives the loop, calls tools, scored on trajectory. Not part of the deliverable.
+          </span>
+        </div>
+
+        {/* Main flow: 4 nodes + 3 arrows */}
         <div
           style={{
             display: 'grid',
-            gridTemplateColumns: '1fr 0.45fr 1fr 0.45fr 1fr 0.45fr 1fr 0.45fr 1fr',
+            gridTemplateColumns: '1fr 0.45fr 1fr 0.45fr 1fr 0.45fr 1fr',
             alignItems: 'stretch',
             gap: '0.3rem',
           }}
@@ -112,17 +135,49 @@ export default function Slide3Spine({ onOpenAppendix }) {
           ))}
         </div>
 
+        {/* Constraint band: Business policies — governs the flow above */}
+        <div
+          style={{
+            marginTop: '0.6rem',
+            display: 'flex',
+            alignItems: 'center',
+            gap: '0.85rem',
+            padding: '0.75rem 1rem',
+            background: 'rgba(255, 140, 95, 0.10)',
+            border: '1px solid rgba(255, 140, 95, 0.30)',
+            borderRadius: '0.6rem',
+          }}
+        >
+          <span
+            style={{
+              display: 'inline-flex',
+              alignItems: 'center',
+              gap: '0.35rem',
+              flexShrink: 0,
+            }}
+          >
+            <ChevronUp size={16} color="var(--accent-coral)" />
+            <BookOpenCheck size={16} color="var(--accent-coral)" />
+          </span>
+          <span style={{ fontSize: '0.85rem', lineHeight: 1.4, color: 'var(--text-primary)' }}>
+            <strong style={{ color: 'var(--accent-coral)' }}>Business policies</strong>
+            {' '}— multi-party rules (Users · Restaurants · Couriers · Platforms){' '}
+            <span style={{ color: 'var(--text-secondary)' }}>
+              constrain valid agent actions and gate what reward logic accepts.
+            </span>
+          </span>
+        </div>
+
         <p
           style={{
-            fontSize: '0.75rem',
+            fontSize: '0.72rem',
             color: 'var(--text-muted)',
-            marginTop: '0.7rem',
+            marginTop: '0.55rem',
             fontStyle: 'italic',
             lineHeight: 1.45,
           }}
         >
-          Plugs into your existing Tau-bench tooling — comparable metrics, reusable task structures,
-          standardised tool formats.
+          Tau-bench compatible — comparable metrics, reusable task structures, standardised tool formats.
         </p>
       </div>
 
@@ -208,11 +263,11 @@ function FlowNode({ icon: Icon, label, annotation }) {
     <div
       className="toloka-card-flat"
       style={{
-        padding: '1.4rem 0.85rem',
+        padding: '1.1rem 0.85rem',
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'center',
-        gap: '0.65rem',
+        gap: '0.5rem',
         textAlign: 'center',
         background: 'var(--bg-card)',
         boxShadow: 'var(--shadow-soft)',
@@ -220,9 +275,9 @@ function FlowNode({ icon: Icon, label, annotation }) {
     >
       <span
         style={{
-          width: '3rem',
-          height: '3rem',
-          borderRadius: '0.7rem',
+          width: '2.6rem',
+          height: '2.6rem',
+          borderRadius: '0.6rem',
           background: 'rgba(0,105,255,0.08)',
           display: 'inline-flex',
           alignItems: 'center',
@@ -230,11 +285,11 @@ function FlowNode({ icon: Icon, label, annotation }) {
           flexShrink: 0,
         }}
       >
-        <Icon size={22} color="var(--accent-blue)" />
+        <Icon size={20} color="var(--accent-blue)" />
       </span>
       <span
         style={{
-          fontSize: '0.98rem',
+          fontSize: '0.92rem',
           fontWeight: 700,
           color: 'var(--text-primary)',
           lineHeight: 1.2,
@@ -244,7 +299,7 @@ function FlowNode({ icon: Icon, label, annotation }) {
       </span>
       <span
         style={{
-          fontSize: '0.75rem',
+          fontSize: '0.72rem',
           color: 'var(--text-muted)',
           lineHeight: 1.35,
         }}

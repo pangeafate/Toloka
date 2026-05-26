@@ -13,7 +13,7 @@ export default function Slide4Pilot() {
   const buildSlice = [
     'A small set of databases',
     'A small set of tools',
-    'Part of the full policy',
+    'Part of the full business policy',
     'A complete reward loop, end to end',
     '50–100 accepted benchmark tasks',
   ]

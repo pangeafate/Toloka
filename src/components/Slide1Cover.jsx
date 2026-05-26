@@ -58,7 +58,7 @@ export default function Slide1Cover() {
           marginBottom: '4rem',
         }}
       >
-        A resettable world, tools, policy, a simulated customer, and reward logic —
+        A resettable world, tools, business policies, a simulated customer, and reward logic —
         Tau-bench compatible. Built so each next domain costs less.
       </p>
 
