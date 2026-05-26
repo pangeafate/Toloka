@@ -2,14 +2,14 @@ import React from 'react'
 
 export default function Slide5Timeline() {
   const gates = [
-    { label: 'Kick-off',         week: 'W0',     phase: 'pre' },
-    { label: 'Build',            week: 'W1–4',   phase: 'pre' },
-    { label: 'First runnable',   week: 'W5',     phase: 'pre' },
-    { label: 'First scored tasks', week: 'W7',   phase: 'pre' },
-    { label: 'Measured numbers', week: 'W10',    phase: 'pre' },
-    { label: 'Pilot gate',       week: 'W12',    phase: 'gate' },
-    { label: 'Scaling phase',    week: 'W13–24', phase: 'post' },
-    { label: 'Delivery',         week: 'W24+',   phase: 'post' },
+    { label: 'Kick-off',           week: 'W0',     phase: 'pre' },
+    { label: 'Build',              week: 'W1–4',   phase: 'pre' },
+    { label: 'First runnable build', week: 'W5',   phase: 'pre' },
+    { label: 'First scored tasks', week: 'W7',     phase: 'pre' },
+    { label: 'Four numbers measured', week: 'W10', phase: 'pre' },
+    { label: 'Pilot gate',         week: 'W12',    phase: 'gate' },
+    { label: 'Scaling phase',      week: 'W13–24', phase: 'post' },
+    { label: 'Delivery',           week: 'W24+',   phase: 'post' },
   ]
 
   const gateIndex = gates.findIndex(g => g.phase === 'gate')
@@ -24,10 +24,10 @@ export default function Slide5Timeline() {
       <div>
         <div className="section-eyebrow">Timeline</div>
         <h1 style={{ fontSize: '2.6rem', fontWeight: 800, letterSpacing: '-0.01em', lineHeight: 1.1 }}>
-          Where the range <span style={{ color: 'var(--accent-blue)' }}>collapses</span>
+          From kick-off to delivery
         </h1>
         <p style={{ fontSize: '1rem', color: 'var(--text-muted)', marginTop: '0.5rem', maxWidth: '50rem' }}>
-          Indicative weeks from kick-off. The single most important moment in the project is the pilot gate.
+          Indicative weeks from kick-off. The pilot gate is when the cost range becomes a firm number.
         </p>
       </div>
 
@@ -153,7 +153,7 @@ export default function Slide5Timeline() {
               </span>
               {g.phase === 'gate' && (
                 <span className="toloka-pill orange" style={{ fontSize: '0.65rem', whiteSpace: 'nowrap' }}>
-                  Range collapses here
+                  Cost range becomes firm
                 </span>
               )}
             </div>
@@ -167,7 +167,7 @@ export default function Slide5Timeline() {
             Pilot phase · W0–W12
           </span>
           <p style={{ fontSize: '0.95rem', color: 'var(--text-primary)', lineHeight: 1.5 }}>
-            Fixed price. Build the slice, run the four measurements, hand back calibrated numbers and a clear go/adjust signal.
+            Fixed price. Build the first version, run the four measurements, hand back calibrated numbers and a clear go / adjust decision.
           </p>
         </div>
         <div className="toloka-card-flat" style={{ display: 'flex', flexDirection: 'column', gap: '0.4rem' }}>
@@ -175,7 +175,7 @@ export default function Slide5Timeline() {
             Scaling phase · W13+
           </span>
           <p style={{ fontSize: '0.95rem', color: 'var(--text-primary)', lineHeight: 1.5 }}>
-            Range collapses to a firm number using the pilot's measurements. Volume scales, the factory amortises.
+            Cost range becomes a firm number using the pilot&rsquo;s measurements. Volume scales, the per-task cost drops.
           </p>
         </div>
       </div>

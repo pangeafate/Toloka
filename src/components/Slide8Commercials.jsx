@@ -13,8 +13,8 @@ export default function Slide8Commercials() {
       <div>
         <div className="section-eyebrow">Commercials</div>
         <h1 style={{ fontSize: '2.6rem', fontWeight: 800, letterSpacing: '-0.01em', lineHeight: 1.1 }}>
-          Pilot fixed · scaling range ·<br />
-          <span style={{ color: 'var(--accent-blue)' }}>pilot collapses the range</span>
+          Pilot at fixed price &middot; scaling as a range<br />
+          <span style={{ color: 'var(--accent-blue)' }}>the pilot turns the range into a firm number</span>
         </h1>
       </div>
 
@@ -36,11 +36,11 @@ export default function Slide8Commercials() {
             Fixed price
           </h2>
           <p style={{ fontSize: '0.95rem', color: 'var(--text-primary)', lineHeight: 1.45, marginTop: '0.6rem' }}>
-            10–14 weeks. One slice, end-to-end. Deliverables and four measured numbers, on a known budget.
+            10–14 weeks. The first build, end to end. Deliverables and four measured numbers, on a known budget.
           </p>
           <div style={{ display: 'flex', gap: '0.4rem', marginTop: '1rem', flexWrap: 'wrap' }}>
-            <span className="toloka-pill green">Runnable slice</span>
-            <span className="toloka-pill green">Red-team</span>
+            <span className="toloka-pill green">Runnable build</span>
+            <span className="toloka-pill green">Stress-test</span>
             <span className="toloka-pill green">QA + baseline</span>
           </div>
         </div>
@@ -69,7 +69,7 @@ export default function Slide8Commercials() {
             Range → firm
           </h2>
           <p style={{ fontSize: '0.95rem', color: 'var(--text-primary)', lineHeight: 1.45, marginTop: '0.6rem' }}>
-            A range at SOW. <strong>The pilot's three driving numbers collapse it to a firm figure</strong> at the gate.
+            A range at SOW. <strong>The pilot&rsquo;s three driving numbers turn it into a firm number</strong> at the gate.
           </p>
           <div style={{ marginTop: '1rem' }}>
             <span style={{ fontSize: '0.7rem', fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', color: 'var(--text-muted)' }}>

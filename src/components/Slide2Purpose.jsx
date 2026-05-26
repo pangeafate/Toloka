@@ -5,53 +5,50 @@ export default function Slide2Purpose() {
   const pillars = [
     {
       n: '01',
-      kicker: 'Scope decision',
-      title: 'Pilot scope confirmed',
-      lede: 'What goes into the slice — environment, tools, partial policy, the end-to-end reward loop.',
-      anchors: ['Pilot SOW', '10–14 weeks', '$370–620k', '~50–100 tasks'],
-      ask: 'Confirm or adjust workflow depth and policy slice in this room.',
+      title: 'Pilot scope',
+      lede: 'What the pilot builds: a working environment, the tools the agent uses, the rules it must follow, and the system that scores its work.',
+      includes: ['Pilot SOW', '10–14 weeks', '$370–620k', '~50–100 tasks'],
+      ask: 'Confirm or adjust which workflows and how much policy detail we cover.',
     },
     {
       n: '02',
-      kicker: 'Inputs commitment',
-      title: 'Your inputs and dates agreed',
-      lede: 'Four gating items — each leaves the room with a named owner and a by-when date.',
-      anchors: ['Technical interface spec', 'Policy source material', 'Named SMEs', 'Sign-off authority'],
-      ask: 'Owner and date on every line before we close Slide 6.',
+      title: 'Inputs and dates from your side',
+      lede: 'Four things we need from you to start the pilot.',
+      includes: ['Technical interface spec', 'Policy source material', 'Named SMEs', 'Sign-off authority'],
+      ask: 'An owner and a date for each one, before we close this call.',
     },
     {
       n: '03',
-      kicker: 'Operating model',
-      title: 'Ways of working locked',
-      lede: 'Roles, cadence, and escalation — committed, not aspirational.',
-      anchors: ['Toloka PM · Tech Lead · WFM', 'Weekly working · biweekly steering', '3-level escalation'],
-      ask: 'Client counterparts named — technical, policy, executive sponsor.',
+      title: 'Team setup and ways of working',
+      lede: 'Who does what on both sides, when we meet, and how we escalate when we get stuck.',
+      includes: ['PM · Tech Lead · Workforce Manager', 'Weekly working · biweekly steering', '3-level escalation'],
+      ask: 'Your counterparts named — technical, policy, executive sponsor.',
     },
   ]
 
   const agenda = [
-    { block: 'Recap',       t: '5 min',  detail: 'Spine + success criteria',     slides: 'Slides 2–3' },
-    { block: 'Pilot',       t: '10 min', detail: 'The slice, four numbers, gate', slides: 'Slides 4–5' },
-    { block: 'How we work', t: '10 min', detail: 'Inputs, roles, cadence',        slides: 'Slides 6–7' },
-    { block: 'Decisions',   t: '5 min',  detail: 'SOW pathway, kick-off date',    slides: 'Slides 8–9' },
+    { block: 'Recap',       t: '5 min',  detail: 'What we are building, success criteria',     slides: 'Slides 2–3' },
+    { block: 'Pilot',       t: '10 min', detail: 'What we build, what we measure, the decision point', slides: 'Slides 4–5' },
+    { block: 'How we work', t: '10 min', detail: 'Your inputs, our team, how we meet',         slides: 'Slides 6–7' },
+    { block: 'Decisions',   t: '5 min',  detail: 'SOW approval, kick-off date',                slides: 'Slides 8–9' },
   ]
 
   return (
     <div className="toloka-slide" style={{ justifyContent: 'space-between' }}>
-      {/* ── Header: action title + framing ─────────────────────── */}
+      {/* ── Header ──────────────────────────────────────────── */}
       <div>
-        <div className="section-eyebrow">Purpose &amp; agenda</div>
+        <div className="section-eyebrow">Agenda</div>
         <h1
           style={{
             fontSize: '2.15rem',
             fontWeight: 800,
             letterSpacing: '-0.012em',
-            lineHeight: 1.15,
+            lineHeight: 1.2,
             color: 'var(--text-heading)',
-            maxWidth: '72rem',
+            maxWidth: '78rem',
           }}
         >
-          Today&rsquo;s 30 minutes turn the proposal into a signed pilot kick-off.
+          Scoping call: agree on pilot scope, your inputs and dates, and ways of working.
         </h1>
         <p
           style={{
@@ -62,12 +59,12 @@ export default function Slide2Purpose() {
             lineHeight: 1.5,
           }}
         >
-          Three commitments unlock that. Everything else &mdash; methodology, risk register, governance &mdash;
-          sits in the appendix and we open it on request.
+          Three agreements to leave the room with. The detail &mdash; methods, risks, governance &mdash;
+          is in the appendix and opens when you ask.
         </p>
       </div>
 
-      {/* ── Three pillars ─────────────────────────────────────── */}
+      {/* ── Three pillars ───────────────────────────────────── */}
       <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '1.25rem' }}>
         {pillars.map((p) => (
           <div
@@ -81,30 +78,17 @@ export default function Slide2Purpose() {
               padding: '1.35rem 1.4rem 1.25rem',
             }}
           >
-            <div style={{ display: 'flex', alignItems: 'baseline', justifyContent: 'space-between' }}>
-              <span
-                style={{
-                  fontSize: '1.6rem',
-                  fontWeight: 800,
-                  color: 'var(--accent-blue)',
-                  letterSpacing: '-0.04em',
-                  lineHeight: 1,
-                }}
-              >
-                {p.n}
-              </span>
-              <span
-                style={{
-                  fontSize: '0.65rem',
-                  fontWeight: 700,
-                  letterSpacing: '0.14em',
-                  textTransform: 'uppercase',
-                  color: 'var(--text-muted)',
-                }}
-              >
-                {p.kicker}
-              </span>
-            </div>
+            <span
+              style={{
+                fontSize: '1.6rem',
+                fontWeight: 800,
+                color: 'var(--accent-blue)',
+                letterSpacing: '-0.04em',
+                lineHeight: 1,
+              }}
+            >
+              {p.n}
+            </span>
 
             <h3
               style={{
@@ -142,10 +126,10 @@ export default function Slide2Purpose() {
                     marginBottom: '0.3rem',
                   }}
                 >
-                  Anchors
+                  Includes
                 </div>
                 <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.3rem' }}>
-                  {p.anchors.map((a) => (
+                  {p.includes.map((a) => (
                     <span
                       key={a}
                       style={{
@@ -187,7 +171,7 @@ export default function Slide2Purpose() {
         ))}
       </div>
 
-      {/* ── Agenda + net outcome ──────────────────────────────── */}
+      {/* ── Agenda + outcome ────────────────────────────────── */}
       <div>
         <div
           style={{
@@ -198,7 +182,7 @@ export default function Slide2Purpose() {
           }}
         >
           <span className="section-eyebrow" style={{ color: 'var(--text-muted)', marginBottom: 0 }}>
-            Agenda &middot; ~30 min
+            How the 30 minutes are spent
           </span>
           <span style={{ fontSize: '0.75rem', color: 'var(--text-muted)' }}>
             Appendix held in reserve &mdash; 13 deep dives indexed at A0, pulled up on request
@@ -254,10 +238,10 @@ export default function Slide2Purpose() {
             color: 'var(--text-secondary)',
           }}
         >
-          <span style={{ fontWeight: 700, color: 'var(--text-heading)' }}>Net outcome from today</span>
+          <span style={{ fontWeight: 700, color: 'var(--text-heading)' }}>End of today</span>
           <ArrowRight size={14} color="var(--accent-blue)" />
           <span style={{ color: 'var(--text-primary)' }}>
-            kick-off date locked &middot; pilot SOW signature pathway clear
+            kick-off date set &middot; pilot SOW ready to sign
           </span>
         </div>
       </div>

@@ -3,10 +3,10 @@ import { Box, Gauge, Package, Clock, HandMetal } from 'lucide-react'
 
 export default function Slide4Pilot() {
   const buildSlice = [
-    'N databases',
-    'N tools',
-    'Partial policy',
-    'End-to-end reward loop',
+    'A small set of databases',
+    'A small set of tools',
+    'Part of the full policy',
+    'A complete reward loop, end to end',
   ]
 
   const numbers = [
@@ -17,9 +17,9 @@ export default function Slide4Pilot() {
   ]
 
   const deliverables = [
-    'The runnable slice',
-    'Reward red-team',
-    'QA-and-baseline report',
+    'A working version, end to end',
+    'Reward stress-test',
+    'QA + baseline-agent report',
     'Calibrated numbers for scaling',
   ]
 
@@ -33,7 +33,7 @@ export default function Slide4Pilot() {
           </h1>
         </div>
         <span className="toloka-pill orange">
-          <Clock size={12} /> The pilot is where the range collapses
+          <Clock size={12} /> The pilot turns the cost range into a firm number
         </span>
       </div>
 
@@ -41,7 +41,7 @@ export default function Slide4Pilot() {
 
         <Quadrant
           icon={Box}
-          eyebrow="What gets built — the slice"
+          eyebrow="What we build first"
           color="var(--accent-blue)"
         >
           <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: '0.55rem' }}>
@@ -125,11 +125,11 @@ export default function Slide4Pilot() {
           highlight
         >
           <p style={{ fontSize: '1.05rem', color: 'var(--text-primary)', lineHeight: 1.4, fontWeight: 500 }}>
-            <strong>Confirm the scope of the slice</strong>, or adjust it now.
+            <strong>Confirm the scope of this first build</strong>, or adjust it now.
           </p>
           <p style={{ fontSize: '0.85rem', color: 'var(--text-muted)', marginTop: '0.5rem', lineHeight: 1.4 }}>
             Indicative duration <strong style={{ color: 'var(--text-primary)' }}>10–14 weeks</strong> from kick-off.
-            Range collapses to a firm number at the pilot gate.
+            The pilot turns the range into a firm number at the gate.
           </p>
         </Quadrant>
 

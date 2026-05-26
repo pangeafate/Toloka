@@ -16,7 +16,7 @@ export default function Slide7Roles() {
 
   const escalation = [
     { lvl: 'L1', who: 'PM ↔ Client lead',           when: 'Working-week issues',           color: 'var(--accent-blue)' },
-    { lvl: 'L2', who: 'Tech lead ↔ Client tech',    when: 'Architecture / policy edges',   color: 'var(--accent-orange)' },
+    { lvl: 'L2', who: 'Tech lead ↔ Client tech',    when: 'Architecture and policy edge cases', color: 'var(--accent-orange)' },
     { lvl: 'L3', who: 'Toloka exec ↔ Client sponsor', when: 'Scope, timeline, commercials', color: 'var(--accent-coral)' },
   ]
 
@@ -25,7 +25,7 @@ export default function Slide7Roles() {
       <div>
         <div className="section-eyebrow">How we work</div>
         <h1 style={{ fontSize: '2.6rem', fontWeight: 800, letterSpacing: '-0.01em', lineHeight: 1.1 }}>
-          Roles · cadence · escalation
+          Roles, meeting rhythm, escalation
         </h1>
       </div>
 
@@ -51,11 +51,11 @@ export default function Slide7Roles() {
         }}
       >
         <div>
-          <span className="section-eyebrow">Cadence</span>
+          <span className="section-eyebrow">Meeting rhythm</span>
           <div style={{ display: 'flex', flexDirection: 'column', gap: '0.4rem', marginTop: '0.5rem' }}>
-            <CadenceRow label="Weekly working" detail="Squad ↔ client tech + policy" />
-            <CadenceRow label="Biweekly steering" detail="PM ↔ client lead + sponsor" />
-            <CadenceRow label="Ad-hoc on critical gates" detail="Pilot gate · reward review" />
+            <CadenceRow label="Weekly working meeting" detail="Squad ↔ client tech + policy" />
+            <CadenceRow label="Biweekly steering meeting" detail="PM ↔ client lead + sponsor" />
+            <CadenceRow label="On-demand at critical moments" detail="Pilot gate · reward review" />
           </div>
         </div>
 
@@ -81,7 +81,7 @@ export default function Slide7Roles() {
                 Quality dashboard
               </span>
               <span style={{ fontSize: '0.7rem', color: 'var(--text-muted)' }}>
-                Accepted-task burn-up · acceptance rate · gold-task drift · baseline pass rates
+                Accepted-task progress · acceptance rate · gold-task consistency · baseline pass rates
               </span>
             </div>
           </div>

@@ -6,7 +6,7 @@ export default function Slide9Close() {
     'Pilot scope',
     'Client inputs and dates',
     'Ways of working',
-    'Pilot SOW approval pathway',
+    'Pilot SOW sign-off process',
     'Executive sponsor named',
   ]
 

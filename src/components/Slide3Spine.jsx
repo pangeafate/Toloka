@@ -3,7 +3,7 @@ import { Database, Wrench, FileText, UserRound, Target } from 'lucide-react'
 
 export default function Slide3Spine() {
   const components = [
-    { icon: Database,   label: 'Resettable world' },
+    { icon: Database,   label: 'Resettable environment' },
     { icon: Wrench,     label: 'Tools' },
     { icon: FileText,   label: 'Policy' },
     { icon: UserRound,  label: 'Simulated customer' },
@@ -11,8 +11,8 @@ export default function Slide3Spine() {
   ]
 
   const criteria = [
-    { label: 'Accepted task volume', emphasis: true },
-    { label: 'Pass^k stability',     emphasis: true },
+    { label: 'Accepted task volume',     emphasis: true },
+    { label: 'Pass^k consistency',       emphasis: true },
     { label: 'Reward signal reliability' },
     { label: 'Policy coverage depth' },
     { label: 'Eval-set freshness' },
@@ -21,23 +21,31 @@ export default function Slide3Spine() {
   return (
     <div className="toloka-slide" style={{ justifyContent: 'space-between' }}>
       <div>
-        <div className="section-eyebrow">Spine</div>
-        <h1 style={{ fontSize: '2.4rem', fontWeight: 800, letterSpacing: '-0.01em', lineHeight: 1.15 }}>
-          One organising idea:
-        </h1>
-        <h2
+        <div className="section-eyebrow">Approach</div>
+        <h1
           style={{
-            fontSize: '3.4rem',
+            fontSize: '2.15rem',
             fontWeight: 800,
-            letterSpacing: '-0.02em',
-            lineHeight: 1.05,
-            marginTop: '0.5rem',
-            color: 'var(--accent-blue)',
-            maxWidth: '50rem',
+            letterSpacing: '-0.012em',
+            lineHeight: 1.2,
+            color: 'var(--text-heading)',
+            maxWidth: '74rem',
           }}
         >
-          For RL, data quality is reward quality.
-        </h2>
+          What we are building, and how we measure that it works.
+        </h1>
+        <p
+          style={{
+            fontSize: '1.02rem',
+            color: 'var(--text-secondary)',
+            marginTop: '0.55rem',
+            maxWidth: '64rem',
+            lineHeight: 1.5,
+          }}
+        >
+          A Food Delivery environment for training and evaluation. Tau-bench compatible.
+          Built so the next domain costs less.
+        </p>
       </div>
 
       <div
@@ -55,10 +63,10 @@ export default function Slide3Spine() {
             padding: '1.75rem 2rem',
           }}
         >
-          <div className="section-eyebrow">The deliverable, one line</div>
+          <div className="section-eyebrow">What we deliver</div>
           <p style={{ fontSize: '1.15rem', color: 'var(--text-primary)', fontWeight: 500, lineHeight: 1.45 }}>
-            A Food Delivery environment in the <strong style={{ color: 'var(--accent-blue)' }}>Tau-bench style</strong> —
-            resettable world, tools, policy, simulated customer, reward logic.
+            A <strong style={{ color: 'var(--accent-blue)' }}>Tau-bench compatible</strong> Food Delivery environment,
+            made of five working parts:
           </p>
           <div style={{ display: 'flex', gap: '0.5rem', marginTop: '1rem', flexWrap: 'wrap' }}>
             {components.map((c) => {
@@ -73,11 +81,11 @@ export default function Slide3Spine() {
         </div>
 
         <div className="toloka-card-flat" style={{ padding: '1.75rem 2rem' }}>
-          <div className="section-eyebrow">Position</div>
+          <div className="section-eyebrow">Why the first domain costs more</div>
           <p style={{ fontSize: '1rem', color: 'var(--text-primary)', lineHeight: 1.5 }}>
-            <strong>One domain of several</strong>, built on a
-            <strong style={{ color: 'var(--accent-blue)' }}> reusable factory</strong>.
-            The first costs more; each next one costs less.
+            The first domain pays for the
+            <strong style={{ color: 'var(--accent-blue)' }}> reusable build</strong>.
+            Each next domain reuses it and costs less.
           </p>
         </div>
       </div>
@@ -105,7 +113,7 @@ export default function Slide3Spine() {
               }}
             >
               <span style={{ fontSize: '0.7rem', fontWeight: 700, letterSpacing: '0.06em', textTransform: 'uppercase', color: c.emphasis ? 'var(--accent-green)' : 'var(--text-muted)' }}>
-                {c.emphasis ? 'Driver' : 'Quality'}
+                {c.emphasis ? 'Primary' : 'Supporting'}
               </span>
               <span style={{ fontSize: '0.9rem', fontWeight: 600, color: 'var(--text-primary)' }}>
                 {c.label}

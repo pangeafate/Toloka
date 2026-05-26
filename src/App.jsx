@@ -19,8 +19,8 @@ class SlideErrorBoundary extends Component {
 
 const slides = [
   { name: 'Cover',       component: <Slide1Cover /> },
-  { name: 'Purpose',     component: <Slide2Purpose /> },
-  { name: 'Spine',       component: <Slide3Spine /> },
+  { name: 'Agenda',      component: <Slide2Purpose /> },
+  { name: 'Approach',    component: <Slide3Spine /> },
   { name: 'Pilot',       component: <Slide4Pilot /> },
   { name: 'Timeline',    component: <Slide5Timeline /> },
   { name: 'Inputs',      component: <Slide6Inputs /> },
