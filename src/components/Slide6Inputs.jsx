@@ -1,7 +1,7 @@
 import React from 'react'
-import { FileCode2, Library, Users, Stamp, AlertTriangle, Network, RefreshCw } from 'lucide-react'
+import { FileCode2, Library, Users, Stamp, AlertTriangle, Network, RefreshCw, ArrowUpRight } from 'lucide-react'
 
-export default function Slide6Inputs() {
+export default function Slide6Inputs({ onOpenAppendix }) {
   const inputs = [
     {
       icon: FileCode2,
@@ -116,6 +116,9 @@ export default function Slide6Inputs() {
           eyebrow="Scope decision"
           title="How many parties do we simulate?"
           body="Food Delivery has four — Users · Restaurants · Couriers · Platforms. Each one we include adds workflow surface and cost. Pilot locks how many and to what depth; rest defers to scaling."
+          appendixKey="A2"
+          appendixLabel="A2 · scope detail"
+          onOpenAppendix={onOpenAppendix}
         />
         <DecisionCard
           icon={RefreshCw}
@@ -145,7 +148,8 @@ export default function Slide6Inputs() {
   )
 }
 
-function DecisionCard({ icon: Icon, eyebrow, title, body }) {
+function DecisionCard({ icon: Icon, eyebrow, title, body, appendixKey, appendixLabel, onOpenAppendix }) {
+  const hasAppendix = Boolean(appendixKey && onOpenAppendix)
   return (
     <div
       style={{
@@ -178,6 +182,32 @@ function DecisionCard({ icon: Icon, eyebrow, title, body }) {
       <span style={{ fontSize: '0.75rem', color: 'var(--text-muted)', lineHeight: 1.4 }}>
         {body}
       </span>
+      {hasAppendix && (
+        <button
+          onClick={() => onOpenAppendix(appendixKey)}
+          style={{
+            alignSelf: 'flex-start',
+            marginTop: '0.35rem',
+            display: 'inline-flex',
+            alignItems: 'center',
+            gap: '0.3rem',
+            padding: '0.3rem 0.65rem',
+            borderRadius: '999px',
+            border: '1px solid var(--border-blue)',
+            background: 'rgba(0,105,255,0.06)',
+            color: 'var(--accent-blue)',
+            fontSize: '0.7rem',
+            fontWeight: 600,
+            letterSpacing: '0.01em',
+            cursor: 'pointer',
+            font: 'inherit',
+            fontFamily: 'inherit',
+          }}
+        >
+          {appendixLabel}
+          <ArrowUpRight size={11} />
+        </button>
+      )}
     </div>
   )
 }

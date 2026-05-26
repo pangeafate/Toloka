@@ -1,7 +1,7 @@
 import React from 'react'
-import { Database, Wrench, FileText, UserRound, Target } from 'lucide-react'
+import { Database, Wrench, FileText, UserRound, Target, ArrowUpRight } from 'lucide-react'
 
-export default function Slide3Spine() {
+export default function Slide3Spine({ onOpenAppendix }) {
   const components = [
     { icon: Database,   label: 'Resettable environment' },
     { icon: Wrench,     label: 'Tools' },
@@ -92,6 +92,29 @@ export default function Slide3Spine() {
             <strong style={{ color: 'var(--text-primary)', fontStyle: 'normal' }}> SFT warm-start data</strong>
             &nbsp;— secondary deliverable, no extra authoring cost.
           </p>
+          <button
+            onClick={() => onOpenAppendix && onOpenAppendix('A1')}
+            style={{
+              marginTop: '0.85rem',
+              display: 'inline-flex',
+              alignItems: 'center',
+              gap: '0.35rem',
+              padding: '0.4rem 0.75rem',
+              borderRadius: '999px',
+              border: '1px solid var(--border-blue)',
+              background: 'rgba(0,105,255,0.06)',
+              color: 'var(--accent-blue)',
+              fontSize: '0.75rem',
+              fontWeight: 600,
+              letterSpacing: '0.01em',
+              cursor: 'pointer',
+              font: 'inherit',
+              fontFamily: 'inherit',
+            }}
+          >
+            A1 · anatomy walk-through
+            <ArrowUpRight size={12} />
+          </button>
         </div>
 
         <div className="toloka-card-flat" style={{ padding: '1.75rem 2rem' }}>
