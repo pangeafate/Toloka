@@ -3,22 +3,21 @@ import React from 'react'
 export default function Slide5Timeline() {
   const gates = [
     { label: 'Kick-off',           week: 'W0',     phase: 'pre' },
-    { label: 'Build',              week: 'W1–4',   phase: 'pre' },
+    { label: 'Build',              week: 'W2–7',   phase: 'pre' },
     { label: 'First runnable build', week: 'W5',   phase: 'pre' },
     { label: 'First scored tasks', week: 'W7',     phase: 'pre' },
     { label: 'Four numbers measured', week: 'W10', phase: 'pre' },
     { label: 'Pilot gate',         week: 'W12',    phase: 'gate' },
-    { label: 'Scaling phase',      week: 'W13–24', phase: 'post' },
-    { label: 'Delivery',           week: 'W24+',   phase: 'post' },
+    { label: 'Scaling phase',      week: 'W13–22', phase: 'post' },
+    { label: 'Delivery',           week: 'W22+',   phase: 'post' },
   ]
 
   const modules = [
-    { id: 'M1', name: 'Discovery & requirements alignment', weeks: 3,  phase: 'pilot' },
+    { id: 'M1', name: 'Discovery & requirements alignment', weeks: 2,  phase: 'pilot' },
     { id: 'M2', name: 'Environment & evaluator build',      weeks: 5,  phase: 'pilot' },
-    { id: 'M3', name: 'Benchmark tasks & QA',               weeks: 2,  phase: 'pilot' },
+    { id: 'M3', name: 'Benchmark tasks & QA',               weeks: 3,  phase: 'pilot' },
     { id: 'M4', name: 'RL/SFT validation',                  weeks: 2,  phase: 'pilot' },
     { id: 'M5', name: 'Scaling within Food Delivery',       weeks: 10, phase: 'scaling' },
-    { id: '—',  name: 'Delivery & handover',                weeks: 2,  phase: 'delivery' },
   ]
 
   const gateIndex = gates.findIndex(g => g.phase === 'gate')
@@ -221,7 +220,7 @@ export default function Slide5Timeline() {
         </div>
         <div className="toloka-card-flat" style={{ display: 'flex', flexDirection: 'column', gap: '0.4rem' }}>
           <span style={{ fontSize: '0.7rem', fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', color: 'var(--accent-green)' }}>
-            Scaling phase · W12+ · Module 5
+            Scaling phase · W13–22 · Module 5
           </span>
           <p style={{ fontSize: '0.95rem', color: 'var(--text-primary)', lineHeight: 1.5 }}>
             Cost range becomes a firm number using the pilot&rsquo;s measurements. Volume scales, the per-task cost drops.
