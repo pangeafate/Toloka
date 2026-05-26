@@ -48,7 +48,9 @@ function App() {
     <div className="presentation-container">
 
       <div className="nav">
-        <div className="nav-brand">TOLO<span>KA</span></div>
+        <a href="https://toloka.ai" target="_blank" rel="noopener noreferrer" className="nav-brand" aria-label="Toloka">
+          <img src={`${import.meta.env.BASE_URL}toloka-logo.svg`} alt="Toloka" />
+        </a>
         <div className="nav-tabs">
           {slides.map((slide, index) => (
             <button

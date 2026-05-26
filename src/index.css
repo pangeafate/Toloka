@@ -1,30 +1,40 @@
 :root {
+  /*
+   * Design tokens verified against toloka.ai's Framer design tokens
+   * (extracted from --token-* CSS variables in their rendered HTML).
+   * Updated 2026-05-26.
+   */
+
   /* Backgrounds — light theme */
-  --bg-primary:    #FFFFFF;
+  --bg-primary:    #FFFFFF;            /* Toloka token */
   --bg-secondary:  #F5F5F5;
   --bg-card:       #FAFAFA;
   --bg-card-hover: #F0F0F0;
 
-  /* Text — dark on light */
-  --text-primary:   #1E2126;
-  --text-secondary: #343434;
-  --text-muted:     #717680;
+  /* Text — dark on light (verified Toloka tokens) */
+  --text-primary:   #343434;           /* Toloka token (most common text color) */
+  --text-heading:   #1E2126;           /* Toloka token (used for headings/emphasis) */
+  --text-secondary: #717680;           /* Toloka token */
+  --text-muted:     #999999;           /* Toloka token */
 
-  /* Borders */
-  --border-light: #D9D9D9;
-  --border-blue:  rgba(0, 105, 255, 0.5);
+  /* Borders (Toloka tokens) */
+  --border-light:    #E9EAEB;          /* Toloka token */
+  --border-subtle:   rgba(52, 52, 52, 0.08);  /* Toloka token #34343314 */
+  --border-stronger: rgba(52, 52, 52, 0.56);  /* Toloka token #3434348f */
+  --border-blue:     rgba(0, 105, 255, 0.5);
 
-  /* Accents — Toloka brand */
-  --accent-blue:       #0069FF;
-  --accent-blue-light: #3387FF;
-  --accent-blue-dark:  #0055D9;
+  /* Primary accents — Toloka brand blue family (verified) */
+  --accent-blue:       #0069FF;        /* Toloka token — PRIMARY brand blue */
+  --accent-blue-light: #3387FF;        /* Toloka token */
+  --accent-blue-dark:  #0055D9;        /* Toloka token */
+  --accent-blue-mid:   #408FE8;        /* Toloka token */
 
-  /* Secondary accents */
-  --accent-orange: #FF8C5F;
-  --accent-green:  #036D55;
-  --accent-coral:  #D95D2B;
+  /* Secondary accents (verified Toloka tokens) */
+  --accent-orange: #FF8C5F;            /* Toloka token */
+  --accent-green:  #036D55;            /* Toloka token */
+  --accent-coral:  #D95D2B;            /* Toloka token */
 
-  /* Soft pastel callout backgrounds */
+  /* Soft pastel callout backgrounds (used on toloka.ai for section tints) */
   --bg-callout-green:  #E0FFCC;
   --bg-callout-purple: #E0D7F4;
 
@@ -92,13 +102,15 @@ body {
 }
 
 .nav-brand {
-  font-size: 1.125rem;
-  font-weight: 800;
-  letter-spacing: 0.25rem;
-  color: var(--text-primary);
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+  height: 100%;
 }
-.nav-brand span {
-  color: var(--accent-blue);
+.nav-brand img {
+  height: 1.4rem;
+  width: auto;
+  display: block;
 }
 
 .nav-tabs {
@@ -267,5 +279,5 @@ p, li, span, div {
     padding: 1.25rem 1rem;
   }
   .nav { padding: 0 1rem; }
-  .nav-brand { font-size: 1rem; letter-spacing: 0.15rem; }
+  .nav-brand img { height: 1.1rem; }
 }
