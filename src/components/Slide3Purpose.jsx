@@ -65,7 +65,7 @@ export default function Slide3Purpose() {
       </div>
 
       {/* ── Three pillars stacked vertically; each card split into three sections ─ */}
-      <div style={{ display: 'flex', flexDirection: 'column', gap: '0.85rem', margin: 'auto 0' }}>
+      <div style={{ display: 'flex', flexDirection: 'column', gap: '0.85rem', margin: 'auto 0', width: '70%' }}>
         {pillars.map((p) => (
           <div
             key={p.n}
