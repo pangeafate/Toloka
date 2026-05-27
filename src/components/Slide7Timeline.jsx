@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default function Slide6Timeline() {
+export default function Slide7Timeline() {
   const gates = [
     { label: 'Kick-off',           week: 'W0',     phase: 'pre' },
     { label: 'Build',              week: 'W2–7',   phase: 'pre' },

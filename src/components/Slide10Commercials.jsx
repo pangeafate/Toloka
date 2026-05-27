@@ -1,7 +1,7 @@
 import React from 'react'
 import { Lock, ArrowDown, FileSignature } from 'lucide-react'
 
-export default function Slide9Commercials() {
+export default function Slide10Commercials() {
   const rangeDrivers = [
     'Acceptance rate',
     'Policy complexity',

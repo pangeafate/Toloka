@@ -1,7 +1,7 @@
 import React from 'react'
 import { FileCode2, Library, Users, Stamp, AlertTriangle, Network, RefreshCw, ArrowUpRight } from 'lucide-react'
 
-export default function Slide7Inputs({ onOpenAppendix }) {
+export default function Slide8Inputs({ onOpenAppendix }) {
   const inputs = [
     {
       icon: FileCode2,
@@ -45,7 +45,7 @@ export default function Slide7Inputs({ onOpenAppendix }) {
         </p>
       </div>
 
-      <div style={{ display: 'flex', flexDirection: 'column', gap: '0.75rem' }}>
+      <div style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
         {inputs.map((i) => {
           const Icon = i.icon
           return (
@@ -59,7 +59,7 @@ export default function Slide7Inputs({ onOpenAppendix }) {
                 background: 'var(--bg-card)',
                 border: '1px solid var(--border-light)',
                 borderRadius: '0.75rem',
-                padding: '1rem 1.25rem',
+                padding: '0.75rem 1.25rem',
               }}
             >
               <div style={{ display: 'flex', alignItems: 'center', gap: '0.85rem' }}>
@@ -110,39 +110,41 @@ export default function Slide7Inputs({ onOpenAppendix }) {
         })}
       </div>
 
-      <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '0.75rem' }}>
-        <DecisionCard
-          icon={Network}
-          eyebrow="Scope decision"
-          title="How many parties do we simulate?"
-          body="Food Delivery has four — Users · Restaurants · Couriers · Platforms. Each one we include adds workflow surface and cost. Pilot locks how many and to what depth; rest defers to scaling."
-          appendixKey="A2"
-          appendixLabel="A2 · scope detail"
-          onOpenAppendix={onOpenAppendix}
-        />
-        <DecisionCard
-          icon={RefreshCw}
-          eyebrow="Commercial decision"
-          title="Evaluation-as-a-service: yes or no?"
-          body="Toloka maintains benchmark integrity, hidden eval, and anti-gaming on an ongoing basis — rather than handing the eval set over at delivery. Changes Slide 9."
-        />
-      </div>
+      <div style={{ display: 'flex', flexDirection: 'column', gap: '0.85rem' }}>
+        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '0.75rem' }}>
+          <DecisionCard
+            icon={Network}
+            eyebrow="Scope decision"
+            title="How many parties do we simulate?"
+            body="Food Delivery has four — Users · Restaurants · Couriers · Platforms. Each one we include adds workflow surface and cost. Pilot locks how many and to what depth; rest defers to scaling."
+            appendixKey="A2"
+            appendixLabel="A2 · scope detail"
+            onOpenAppendix={onOpenAppendix}
+          />
+          <DecisionCard
+            icon={RefreshCw}
+            eyebrow="Commercial decision"
+            title="Evaluation-as-a-service: yes or no?"
+            body="Toloka maintains benchmark integrity, hidden eval, and anti-gaming on an ongoing basis — rather than handing the eval set over at delivery. Changes Slide 10."
+          />
+        </div>
 
-      <div
-        style={{
-          display: 'flex',
-          alignItems: 'center',
-          gap: '0.75rem',
-          padding: '0.9rem 1.25rem',
-          background: 'rgba(255, 140, 95, 0.10)',
-          border: '1px solid rgba(255, 140, 95, 0.30)',
-          borderRadius: '0.625rem',
-        }}
-      >
-        <AlertTriangle size={18} color="var(--accent-coral)" />
-        <p style={{ fontSize: '0.9rem', color: 'var(--text-primary)', fontWeight: 500, margin: 0 }}>
-          <strong style={{ color: 'var(--accent-coral)' }}>Honest framing:</strong> if these slip, kick-off slips equivalently — said plainly because it matters.
-        </p>
+        <div
+          style={{
+            display: 'flex',
+            alignItems: 'center',
+            gap: '0.75rem',
+            padding: '0.9rem 1.25rem',
+            background: 'rgba(255, 140, 95, 0.10)',
+            border: '1px solid rgba(255, 140, 95, 0.30)',
+            borderRadius: '0.625rem',
+          }}
+        >
+          <AlertTriangle size={18} color="var(--accent-coral)" />
+          <p style={{ fontSize: '0.9rem', color: 'var(--text-primary)', fontWeight: 500, margin: 0 }}>
+            <strong style={{ color: 'var(--accent-coral)' }}>Honest framing:</strong> if these slip, kick-off slips equivalently — said plainly because it matters.
+          </p>
+        </div>
       </div>
     </div>
   )

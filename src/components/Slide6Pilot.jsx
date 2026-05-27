@@ -1,7 +1,7 @@
 import React from 'react'
 import { Compass, Box, Gauge, Clock, HandMetal } from 'lucide-react'
 
-export default function Slide5Pilot() {
+export default function Slide6Pilot() {
   const requirementCategories = [
     'Architectural',
     'Domain-specific',
@@ -139,7 +139,7 @@ export default function Slide5Pilot() {
             })}
           </div>
           <p style={{ fontSize: '0.7rem', color: 'var(--text-muted)', marginTop: '0.55rem', lineHeight: 1.4, fontStyle: 'italic' }}>
-            Four measured · three drive the commercial range · one is the quality gate. Picked up again on Slide 9.
+            Four measured · three drive the commercial range · one is the quality gate. Picked up again on Slide 10.
           </p>
         </Quadrant>
 

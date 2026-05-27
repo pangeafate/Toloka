@@ -28,9 +28,9 @@ export default function Slide3Purpose() {
 
   const agenda = [
     { block: 'Recap',       t: '5 min',  detail: 'What we are building, success criteria',     slides: 'Slides 3–4' },
-    { block: 'Pilot',       t: '10 min', detail: 'What we build, what we measure, the decision point', slides: 'Slides 5–6' },
-    { block: 'How we work', t: '10 min', detail: 'Your inputs, our team, how we meet',         slides: 'Slides 7–8' },
-    { block: 'Decisions',   t: '5 min',  detail: 'SOW approval, kick-off date',                slides: 'Slides 9–10' },
+    { block: 'Pilot',       t: '10 min', detail: 'What we build, what we measure, the decision point', slides: 'Slides 6–7' },
+    { block: 'How we work', t: '10 min', detail: 'Your inputs, our team, how we meet',         slides: 'Slides 8–9' },
+    { block: 'Decisions',   t: '5 min',  detail: 'SOW approval, kick-off date',                slides: 'Slides 10–11' },
   ]
 
   return (

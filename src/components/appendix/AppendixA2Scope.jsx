@@ -13,7 +13,7 @@ import { ArrowLeft, User, ChefHat, Bike, Building2 } from 'lucide-react'
  *   - Courier in-flight example: p.13 risk 1.4 "courier late by x variations"
  *
  * v1/defer assignment for stakeholders is NOT pre-decided here — that decision
- * happens on Slide 7 in the room. A2 just shows the choice space.
+ * happens on Slide 8 in the room. A2 just shows the choice space.
  */
 export default function AppendixA2Scope({ onClose }) {
   const stakeholders = [
@@ -65,7 +65,7 @@ export default function AppendixA2Scope({ onClose }) {
   return (
     <div className="toloka-slide" style={{ justifyContent: 'space-between' }}>
       <div>
-        <BackLink onClose={onClose} label="Back to Inputs (Slide 7)" />
+        <BackLink onClose={onClose} label="Back to Inputs (Slide 8)" />
         <div className="section-eyebrow" style={{ marginTop: '0.85rem' }}>
           Appendix A2
         </div>
@@ -89,7 +89,7 @@ export default function AppendixA2Scope({ onClose }) {
             lineHeight: 1.5,
           }}
         >
-          Pilot v1 scope is set in the room at Slide 7 with you and the SMEs. This is the choice space.
+          Pilot v1 scope is set in the room at Slide 8 with you and the SMEs. This is the choice space.
         </p>
       </div>
 

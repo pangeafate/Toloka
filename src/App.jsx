@@ -4,12 +4,13 @@ import Slide1Cover from './components/Slide1Cover'
 import Slide2Understanding from './components/Slide2Understanding'
 import Slide3Purpose from './components/Slide3Purpose'
 import Slide4Spine from './components/Slide4Spine'
-import Slide5Pilot from './components/Slide5Pilot'
-import Slide6Timeline from './components/Slide6Timeline'
-import Slide7Inputs from './components/Slide7Inputs'
-import Slide8Roles from './components/Slide8Roles'
-import Slide9Commercials from './components/Slide9Commercials'
-import Slide10Close from './components/Slide10Close'
+import Slide5TaskPipeline from './components/Slide5TaskPipeline'
+import Slide6Pilot from './components/Slide6Pilot'
+import Slide7Timeline from './components/Slide7Timeline'
+import Slide8Inputs from './components/Slide8Inputs'
+import Slide9Roles from './components/Slide9Roles'
+import Slide10Commercials from './components/Slide10Commercials'
+import Slide11Close from './components/Slide11Close'
 
 import AppendixA1Anatomy from './components/appendix/AppendixA1Anatomy'
 import AppendixA2Scope from './components/appendix/AppendixA2Scope'
@@ -26,12 +27,13 @@ const slides = [
   { name: 'Understanding', Component: Slide2Understanding },
   { name: 'Agenda',        Component: Slide3Purpose },
   { name: 'Approach',      Component: Slide4Spine },
-  { name: 'Pilot',         Component: Slide5Pilot },
-  { name: 'Timeline',      Component: Slide6Timeline },
-  { name: 'Inputs',        Component: Slide7Inputs },
-  { name: 'Roles',         Component: Slide8Roles },
-  { name: 'Commercials',   Component: Slide9Commercials },
-  { name: 'Decisions',     Component: Slide10Close },
+  { name: 'Task Pipeline', Component: Slide5TaskPipeline },
+  { name: 'Pilot',         Component: Slide6Pilot },
+  { name: 'Timeline',      Component: Slide7Timeline },
+  { name: 'Inputs',        Component: Slide8Inputs },
+  { name: 'Roles',         Component: Slide9Roles },
+  { name: 'Commercials',   Component: Slide10Commercials },
+  { name: 'Decisions',     Component: Slide11Close },
 ]
 
 const appendixSlides = {
