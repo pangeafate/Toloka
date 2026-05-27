@@ -64,108 +64,122 @@ export default function Slide3Purpose() {
         </p>
       </div>
 
-      {/* ── Three pillars (vertically centered in remaining space) ─ */}
-      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '1.25rem', margin: 'auto 0' }}>
+      {/* ── Three pillars stacked vertically; each card split into three sections ─ */}
+      <div style={{ display: 'flex', flexDirection: 'column', gap: '0.85rem', margin: 'auto 0' }}>
         {pillars.map((p) => (
           <div
             key={p.n}
             className="toloka-card"
             style={{
               display: 'flex',
-              flexDirection: 'column',
-              gap: '0.65rem',
+              alignItems: 'stretch',
               borderTop: '3px solid var(--accent-blue)',
-              padding: '1.35rem 1.4rem 1.25rem',
+              padding: '1.1rem 1.25rem',
+              gap: '1.25rem',
             }}
           >
-            <span
-              style={{
-                fontSize: '1.6rem',
-                fontWeight: 800,
-                color: 'var(--accent-blue)',
-                letterSpacing: '-0.04em',
-                lineHeight: 1,
-              }}
-            >
-              {p.n}
-            </span>
+            {/* Section 1 — Main */}
+            <div style={{ flex: '1.25', display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
+              <span
+                style={{
+                  fontSize: '1.6rem',
+                  fontWeight: 800,
+                  color: 'var(--accent-blue)',
+                  letterSpacing: '-0.04em',
+                  lineHeight: 1,
+                }}
+              >
+                {p.n}
+              </span>
 
-            <h3
-              style={{
-                fontSize: '1.18rem',
-                fontWeight: 700,
-                lineHeight: 1.25,
-                color: 'var(--text-heading)',
-              }}
-            >
-              {p.title}
-            </h3>
+              <h3
+                style={{
+                  fontSize: '1.18rem',
+                  fontWeight: 700,
+                  lineHeight: 1.25,
+                  color: 'var(--text-heading)',
+                }}
+              >
+                {p.title}
+              </h3>
 
-            <p style={{ fontSize: '0.9rem', color: 'var(--text-secondary)', lineHeight: 1.5 }}>
-              {p.lede}
-            </p>
+              <p style={{ fontSize: '0.9rem', color: 'var(--text-secondary)', lineHeight: 1.5 }}>
+                {p.lede}
+              </p>
+            </div>
 
+            {/* Subtle vertical divider — does not touch card edges */}
             <div
               style={{
-                marginTop: '0.4rem',
-                paddingTop: '0.75rem',
-                borderTop: '1px solid var(--border-subtle)',
-                display: 'flex',
-                flexDirection: 'column',
-                gap: '0.55rem',
+                width: '1px',
+                background: 'var(--border-subtle)',
+                alignSelf: 'stretch',
+                margin: '0.6rem 0',
+                flexShrink: 0,
               }}
-            >
-              <div>
-                <div
-                  style={{
-                    fontSize: '0.62rem',
-                    fontWeight: 700,
-                    letterSpacing: '0.14em',
-                    textTransform: 'uppercase',
-                    color: 'var(--text-muted)',
-                    marginBottom: '0.3rem',
-                  }}
-                >
-                  Includes
-                </div>
-                <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.3rem' }}>
-                  {p.includes.map((a) => (
-                    <span
-                      key={a}
-                      style={{
-                        fontSize: '0.74rem',
-                        fontWeight: 600,
-                        color: 'var(--text-primary)',
-                        background: 'var(--bg-secondary)',
-                        border: '1px solid var(--border-light)',
-                        borderRadius: '0.35rem',
-                        padding: '0.18rem 0.5rem',
-                        whiteSpace: 'nowrap',
-                      }}
-                    >
-                      {a}
-                    </span>
-                  ))}
-                </div>
-              </div>
+            />
 
-              <div>
-                <span
-                  style={{
-                    fontSize: '0.62rem',
-                    fontWeight: 700,
-                    letterSpacing: '0.14em',
-                    textTransform: 'uppercase',
-                    color: 'var(--accent-blue)',
-                    marginRight: '0.45rem',
-                  }}
-                >
-                  Ask
-                </span>
-                <span style={{ fontSize: '0.82rem', color: 'var(--text-primary)', lineHeight: 1.45 }}>
-                  {p.ask}
-                </span>
+            {/* Section 2 — Includes */}
+            <div style={{ flex: '1', display: 'flex', flexDirection: 'column', gap: '0.4rem', justifyContent: 'center' }}>
+              <div
+                style={{
+                  fontSize: '0.62rem',
+                  fontWeight: 700,
+                  letterSpacing: '0.14em',
+                  textTransform: 'uppercase',
+                  color: 'var(--text-muted)',
+                }}
+              >
+                Includes
               </div>
+              <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.3rem' }}>
+                {p.includes.map((a) => (
+                  <span
+                    key={a}
+                    style={{
+                      fontSize: '0.74rem',
+                      fontWeight: 600,
+                      color: 'var(--text-primary)',
+                      background: 'var(--bg-secondary)',
+                      border: '1px solid var(--border-light)',
+                      borderRadius: '0.35rem',
+                      padding: '0.18rem 0.5rem',
+                      whiteSpace: 'nowrap',
+                    }}
+                  >
+                    {a}
+                  </span>
+                ))}
+              </div>
+            </div>
+
+            {/* Subtle vertical divider — does not touch card edges */}
+            <div
+              style={{
+                width: '1px',
+                background: 'var(--border-subtle)',
+                alignSelf: 'stretch',
+                margin: '0.6rem 0',
+                flexShrink: 0,
+              }}
+            />
+
+            {/* Section 3 — Ask */}
+            <div style={{ flex: '1.1', display: 'flex', flexDirection: 'column', gap: '0.35rem', justifyContent: 'center' }}>
+              <div
+                style={{
+                  fontSize: '0.62rem',
+                  fontWeight: 700,
+                  letterSpacing: '0.14em',
+                  textTransform: 'uppercase',
+                  color: 'var(--accent-blue)',
+                }}
+              >
+                Ask
+              </div>
+              <span style={{ fontSize: '0.82rem', color: 'var(--text-primary)', lineHeight: 1.45 }}>
+                {p.ask}
+              </span>
             </div>
           </div>
         ))}
