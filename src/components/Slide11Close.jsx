@@ -7,19 +7,16 @@ export default function Slide11Close() {
       icon: FileSignature,
       question: 'Who authors the policy?',
       recommend: 'Toloka drafts realistic Food Delivery policies; Client signs off and supplies real rules if it has them.',
-      cost: '~2 weeks of policy ping-pong before any build can start.',
     },
     {
       icon: Plug,
       question: 'Who owns the integration interface?',
       recommend: 'Client owns the spec of its training stack; Toloka builds the adapter to it.',
-      cost: 'Environment build runs speculative; rework risk on first integration test.',
     },
     {
       icon: ShieldCheck,
       question: 'Who runs ongoing evaluation?',
       recommend: 'Toloka runs evaluation as a service — hidden hold-outs, anti-gaming, pass-rate reporting.',
-      cost: 'Hand-over weakens benchmark integrity; saturation goes undetected.',
     },
   ]
 
@@ -108,13 +105,9 @@ export default function Slide11Close() {
                         {d.question}
                       </span>
                     </div>
-                    <div style={{ fontSize: '0.82rem', lineHeight: 1.35, color: 'var(--text-primary)' }}>
+                    <div style={{ fontSize: '0.88rem', lineHeight: 1.4, color: 'var(--text-primary)' }}>
                       <span style={{ fontWeight: 700, color: 'var(--accent-green)' }}>Recommend: </span>
                       {d.recommend}
-                    </div>
-                    <div style={{ fontSize: '0.78rem', lineHeight: 1.35, color: 'var(--text-secondary)' }}>
-                      <span style={{ fontWeight: 700, color: 'var(--accent-coral)' }}>If not settled: </span>
-                      {d.cost}
                     </div>
                   </div>
                 </div>
@@ -209,72 +202,48 @@ export default function Slide11Close() {
             ))}
           </div>
 
-          <div
-            style={{
-              fontSize: '0.78rem',
-              color: 'var(--text-secondary)',
-              lineHeight: 1.4,
-              borderTop: '1px solid var(--border-subtle)',
-              paddingTop: '0.55rem',
-              marginTop: '0.15rem',
-            }}
-          >
-            <span style={{ fontWeight: 700, color: 'var(--text-heading)' }}>One ask: </span>
-            a kick-off date held in calendars by end of Week 1. Everything else, Toloka drives.
-          </div>
         </div>
       </div>
 
-      {/* Bottom value strip — replaces the plea */}
+      {/* Bottom value strip — what today's decisions unlock */}
       <div
         style={{
           display: 'grid',
-          gridTemplateColumns: 'auto 1fr auto 1fr auto 1fr auto',
+          gridTemplateColumns: 'repeat(4, 1fr)',
           alignItems: 'center',
-          gap: '0.75rem',
-          padding: '0.9rem 1.4rem',
+          padding: '1rem 1.6rem',
           background: 'var(--accent-blue)',
           borderRadius: '0.75rem',
           color: '#FFFFFF',
         }}
       >
-        <span style={{ fontSize: '0.8rem', fontWeight: 700, letterSpacing: '0.08em', textTransform: 'uppercase', opacity: 0.85, color: '#FFFFFF' }}>
-          What today unlocks
-        </span>
         <Stat label="Pilot duration" value="10–14 weeks" />
-        <Divider />
-        <Stat label="Pilot investment" value="$370–620k" />
-        <Divider />
-        <Stat label="Benchmark tasks" value="50–100" />
-        <Divider />
-        <Stat label="First RL signal" value="≤ 14 weeks" />
+        <Stat label="Pilot investment" value="$370–620k" divider />
+        <Stat label="Benchmark tasks" value="50–100" divider />
+        <Stat label="First RL signal" value="≤ 14 weeks" divider />
       </div>
     </div>
   )
 }
 
-function Stat({ label, value }) {
+function Stat({ label, value, divider }) {
   return (
-    <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-start', minWidth: 0 }}>
-      <span style={{ fontSize: '0.72rem', fontWeight: 600, letterSpacing: '0.05em', textTransform: 'uppercase', opacity: 0.78, color: '#FFFFFF' }}>
+    <div
+      style={{
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'flex-start',
+        gap: '0.15rem',
+        paddingLeft: divider ? '1.4rem' : 0,
+        borderLeft: divider ? '1px solid rgba(255, 255, 255, 0.22)' : 'none',
+      }}
+    >
+      <span style={{ fontSize: '0.72rem', fontWeight: 600, letterSpacing: '0.06em', textTransform: 'uppercase', opacity: 0.82, color: '#FFFFFF' }}>
         {label}
       </span>
-      <span style={{ fontSize: '1.35rem', fontWeight: 800, letterSpacing: '-0.01em', color: '#FFFFFF', lineHeight: 1.15 }}>
+      <span style={{ fontSize: '1.55rem', fontWeight: 800, letterSpacing: '-0.01em', color: '#FFFFFF', lineHeight: 1.1 }}>
         {value}
       </span>
     </div>
-  )
-}
-
-function Divider() {
-  return (
-    <span
-      aria-hidden
-      style={{
-        width: '1px',
-        height: '2rem',
-        background: 'rgba(255, 255, 255, 0.28)',
-      }}
-    />
   )
 }
