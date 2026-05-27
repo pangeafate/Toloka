@@ -50,18 +50,6 @@ export default function Slide3Purpose() {
         >
           Scoping call: agree on pilot scope, your inputs and dates, and ways of working.
         </h1>
-        <p
-          style={{
-            fontSize: '1.02rem',
-            color: 'var(--text-secondary)',
-            marginTop: '0.55rem',
-            maxWidth: '64rem',
-            lineHeight: 1.5,
-          }}
-        >
-          Three agreements to leave the room with. The detail &mdash; methods, risks, governance &mdash;
-          is in the appendix and opens when you ask.
-        </p>
       </div>
 
       {/* ── Three pillars stacked vertically; each card split into three sections ─ */}
