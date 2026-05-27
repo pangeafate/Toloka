@@ -1,5 +1,5 @@
 import React from 'react'
-import { FileCode2, Library, Users, Stamp, AlertTriangle, Network, RefreshCw, ArrowUpRight } from 'lucide-react'
+import { FileCode2, Library, Users, Stamp, Network, RefreshCw, ArrowUpRight } from 'lucide-react'
 
 export default function Slide8Inputs({ onOpenAppendix }) {
   const inputs = [
@@ -110,41 +110,22 @@ export default function Slide8Inputs({ onOpenAppendix }) {
         })}
       </div>
 
-      <div style={{ display: 'flex', flexDirection: 'column', gap: '0.85rem' }}>
-        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '0.75rem' }}>
-          <DecisionCard
-            icon={Network}
-            eyebrow="Scope decision"
-            title="How many parties do we simulate?"
-            body="Food Delivery has four — Users · Restaurants · Couriers · Platforms. Each one we include adds workflow surface and cost. Pilot locks how many and to what depth; rest defers to scaling."
-            appendixKey="A2"
-            appendixLabel="A2 · scope detail"
-            onOpenAppendix={onOpenAppendix}
-          />
-          <DecisionCard
-            icon={RefreshCw}
-            eyebrow="Commercial decision"
-            title="Evaluation-as-a-service: yes or no?"
-            body="Toloka maintains benchmark integrity, hidden eval, and anti-gaming on an ongoing basis — rather than handing the eval set over at delivery. Changes Slide 10."
-          />
-        </div>
-
-        <div
-          style={{
-            display: 'flex',
-            alignItems: 'center',
-            gap: '0.75rem',
-            padding: '0.9rem 1.25rem',
-            background: 'rgba(255, 140, 95, 0.10)',
-            border: '1px solid rgba(255, 140, 95, 0.30)',
-            borderRadius: '0.625rem',
-          }}
-        >
-          <AlertTriangle size={18} color="var(--accent-coral)" />
-          <p style={{ fontSize: '0.9rem', color: 'var(--text-primary)', fontWeight: 500, margin: 0 }}>
-            <strong style={{ color: 'var(--accent-coral)' }}>Honest framing:</strong> if these slip, kick-off slips equivalently — said plainly because it matters.
-          </p>
-        </div>
+      <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '0.75rem' }}>
+        <DecisionCard
+          icon={Network}
+          eyebrow="Scope decision"
+          title="How many parties do we simulate?"
+          body="Food Delivery has four — Users · Restaurants · Couriers · Platforms. Each one we include adds workflow surface and cost. Pilot locks how many and to what depth; rest defers to scaling."
+          appendixKey="A2"
+          appendixLabel="A2 · scope detail"
+          onOpenAppendix={onOpenAppendix}
+        />
+        <DecisionCard
+          icon={RefreshCw}
+          eyebrow="Commercial decision"
+          title="Evaluation-as-a-service: yes or no?"
+          body="Toloka maintains benchmark integrity, hidden eval, and anti-gaming on an ongoing basis — rather than handing the eval set over at delivery. Changes Slide 10."
+        />
       </div>
     </div>
   )
