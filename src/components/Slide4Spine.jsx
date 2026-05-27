@@ -44,7 +44,7 @@ export default function Slide4Spine({ onOpenAppendix }) {
           }}
         >
           A <span style={{ color: 'var(--accent-blue)' }}>Tau-bench compatible</span> Food Delivery
-          RL environment — five working parts, five measured outcomes.
+          RL environment: From Synthetic Intent to Reward Logic.
         </h1>
         <p
           style={{
@@ -113,8 +113,8 @@ export default function Slide4Spine({ onOpenAppendix }) {
         >
           <Cpu size={14} color="var(--text-secondary)" />
           <span style={{ fontSize: '0.78rem', color: 'var(--text-secondary)', lineHeight: 1.4 }}>
-            <strong style={{ color: 'var(--text-primary)' }}>Your agent (LLM under training) plugs in here</strong>
-            {' '}— drives the loop, calls tools, scored on trajectory. Not part of the deliverable.
+            <strong style={{ color: 'var(--text-primary)' }}>LLM under training plugs in here</strong>
+            {' '}— drives the loop, calls tools, scored on trajectory. Provided by the Client.
           </span>
         </div>
 
@@ -192,7 +192,7 @@ export default function Slide4Spine({ onOpenAppendix }) {
           }}
         >
           <div className="section-eyebrow" style={{ color: 'var(--text-muted)', marginBottom: 0 }}>
-            Measured by
+            Measured by (tentative)
           </div>
           <span
             style={{
