@@ -21,7 +21,7 @@ export default function Slide2Purpose() {
       n: '03',
       title: 'Work allocation and ways of working',
       lede: 'Who does what on both sides, when we meet, and three work-allocation decisions to settle today.',
-      includes: ['PM · Tech Lead · Workforce Manager', 'Weekly working · biweekly steering', '3-level escalation'],
+      includes: ['PM · Tech Lead · Workforce Manager', 'Weekly working · biweekly steering', 'Escalation: PM → Tech lead → Exec'],
       ask: 'Counterparts named, plus three work-allocation decisions: who authors policy · the integration interface · who runs ongoing evaluation.',
     },
   ]
@@ -34,7 +34,7 @@ export default function Slide2Purpose() {
   ]
 
   return (
-    <div className="toloka-slide" style={{ justifyContent: 'space-between' }}>
+    <div className="toloka-slide" style={{ justifyContent: 'flex-start' }}>
       {/* ── Header ──────────────────────────────────────────── */}
       <div>
         <div className="section-eyebrow">Agenda</div>
@@ -64,8 +64,8 @@ export default function Slide2Purpose() {
         </p>
       </div>
 
-      {/* ── Three pillars ───────────────────────────────────── */}
-      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '1.25rem' }}>
+      {/* ── Three pillars (vertically centered in remaining space) ─ */}
+      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '1.25rem', margin: 'auto 0' }}>
         {pillars.map((p) => (
           <div
             key={p.n}
