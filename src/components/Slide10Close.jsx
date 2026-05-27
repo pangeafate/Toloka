@@ -1,7 +1,7 @@
 import React from 'react'
 import { CheckCircle2, ArrowRight, CalendarClock } from 'lucide-react'
 
-export default function Slide9Close() {
+export default function Slide10Close() {
   const decisionsToday = [
     'Pilot scope',
     'Client inputs and dates',

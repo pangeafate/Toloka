@@ -1,14 +1,15 @@
 import { useState, useEffect, Component } from 'react'
 
 import Slide1Cover from './components/Slide1Cover'
-import Slide2Purpose from './components/Slide2Purpose'
-import Slide3Spine from './components/Slide3Spine'
-import Slide4Pilot from './components/Slide4Pilot'
-import Slide5Timeline from './components/Slide5Timeline'
-import Slide6Inputs from './components/Slide6Inputs'
-import Slide7Roles from './components/Slide7Roles'
-import Slide8Commercials from './components/Slide8Commercials'
-import Slide9Close from './components/Slide9Close'
+import Slide2Understanding from './components/Slide2Understanding'
+import Slide3Purpose from './components/Slide3Purpose'
+import Slide4Spine from './components/Slide4Spine'
+import Slide5Pilot from './components/Slide5Pilot'
+import Slide6Timeline from './components/Slide6Timeline'
+import Slide7Inputs from './components/Slide7Inputs'
+import Slide8Roles from './components/Slide8Roles'
+import Slide9Commercials from './components/Slide9Commercials'
+import Slide10Close from './components/Slide10Close'
 
 import AppendixA1Anatomy from './components/appendix/AppendixA1Anatomy'
 import AppendixA2Scope from './components/appendix/AppendixA2Scope'
@@ -21,15 +22,16 @@ class SlideErrorBoundary extends Component {
 }
 
 const slides = [
-  { name: 'Cover',       Component: Slide1Cover },
-  { name: 'Agenda',      Component: Slide2Purpose },
-  { name: 'Approach',    Component: Slide3Spine },
-  { name: 'Pilot',       Component: Slide4Pilot },
-  { name: 'Timeline',    Component: Slide5Timeline },
-  { name: 'Inputs',      Component: Slide6Inputs },
-  { name: 'Roles',       Component: Slide7Roles },
-  { name: 'Commercials', Component: Slide8Commercials },
-  { name: 'Decisions',   Component: Slide9Close },
+  { name: 'Cover',         Component: Slide1Cover },
+  { name: 'Understanding', Component: Slide2Understanding },
+  { name: 'Agenda',        Component: Slide3Purpose },
+  { name: 'Approach',      Component: Slide4Spine },
+  { name: 'Pilot',         Component: Slide5Pilot },
+  { name: 'Timeline',      Component: Slide6Timeline },
+  { name: 'Inputs',        Component: Slide7Inputs },
+  { name: 'Roles',         Component: Slide8Roles },
+  { name: 'Commercials',   Component: Slide9Commercials },
+  { name: 'Decisions',     Component: Slide10Close },
 ]
 
 const appendixSlides = {

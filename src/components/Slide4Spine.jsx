@@ -10,7 +10,7 @@ import {
   ArrowUpRight,
 } from 'lucide-react'
 
-export default function Slide3Spine({ onOpenAppendix }) {
+export default function Slide4Spine({ onOpenAppendix }) {
   const nodes = [
     { icon: UserRound, label: 'Simulated customer', annotation: 'Goal-driven user model' },
     { icon: Wrench,    label: 'Tools',              annotation: 'Stateful APIs' },

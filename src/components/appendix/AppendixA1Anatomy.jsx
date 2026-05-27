@@ -78,7 +78,7 @@ export default function AppendixA1Anatomy({ onClose }) {
   return (
     <div className="toloka-slide" style={{ justifyContent: 'space-between' }}>
       <div>
-        <BackLink onClose={onClose} label="Back to Approach (Slide 3)" />
+        <BackLink onClose={onClose} label="Back to Approach (Slide 4)" />
         <div className="section-eyebrow" style={{ marginTop: '0.85rem' }}>
           Appendix A1
         </div>

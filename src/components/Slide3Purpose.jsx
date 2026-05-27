@@ -1,7 +1,7 @@
 import React from 'react'
 import { ArrowRight } from 'lucide-react'
 
-export default function Slide2Purpose() {
+export default function Slide3Purpose() {
   const pillars = [
     {
       n: '01',
@@ -27,10 +27,10 @@ export default function Slide2Purpose() {
   ]
 
   const agenda = [
-    { block: 'Recap',       t: '5 min',  detail: 'What we are building, success criteria',     slides: 'Slides 2–3' },
-    { block: 'Pilot',       t: '10 min', detail: 'What we build, what we measure, the decision point', slides: 'Slides 4–5' },
-    { block: 'How we work', t: '10 min', detail: 'Your inputs, our team, how we meet',         slides: 'Slides 6–7' },
-    { block: 'Decisions',   t: '5 min',  detail: 'SOW approval, kick-off date',                slides: 'Slides 8–9' },
+    { block: 'Recap',       t: '5 min',  detail: 'What we are building, success criteria',     slides: 'Slides 3–4' },
+    { block: 'Pilot',       t: '10 min', detail: 'What we build, what we measure, the decision point', slides: 'Slides 5–6' },
+    { block: 'How we work', t: '10 min', detail: 'Your inputs, our team, how we meet',         slides: 'Slides 7–8' },
+    { block: 'Decisions',   t: '5 min',  detail: 'SOW approval, kick-off date',                slides: 'Slides 9–10' },
   ]
 
   return (

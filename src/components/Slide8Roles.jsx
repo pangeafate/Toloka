@@ -1,7 +1,7 @@
 import React from 'react'
 import { UserRound, Code2, Briefcase, Cpu, Scale, Crown, BarChart3, ArrowUpRight } from 'lucide-react'
 
-export default function Slide7Roles() {
+export default function Slide8Roles() {
   const tolokaSquad = [
     { icon: UserRound, role: 'PM',                name: 'Single point of contact' },
     { icon: Code2,     role: 'Tech lead',         name: 'Owns environment + reward' },

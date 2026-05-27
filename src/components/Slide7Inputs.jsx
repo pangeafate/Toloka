@@ -1,7 +1,7 @@
 import React from 'react'
 import { FileCode2, Library, Users, Stamp, AlertTriangle, Network, RefreshCw, ArrowUpRight } from 'lucide-react'
 
-export default function Slide6Inputs({ onOpenAppendix }) {
+export default function Slide7Inputs({ onOpenAppendix }) {
   const inputs = [
     {
       icon: FileCode2,
@@ -124,7 +124,7 @@ export default function Slide6Inputs({ onOpenAppendix }) {
           icon={RefreshCw}
           eyebrow="Commercial decision"
           title="Evaluation-as-a-service: yes or no?"
-          body="Toloka maintains benchmark integrity, hidden eval, and anti-gaming on an ongoing basis — rather than handing the eval set over at delivery. Changes Slide 8."
+          body="Toloka maintains benchmark integrity, hidden eval, and anti-gaming on an ongoing basis — rather than handing the eval set over at delivery. Changes Slide 9."
         />
       </div>
 
