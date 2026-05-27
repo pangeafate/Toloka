@@ -38,7 +38,7 @@ export default function Slide6Pilot() {
         <div>
           <div className="section-eyebrow">Pilot</div>
           <h1 style={{ fontSize: '2.6rem', fontWeight: 800, letterSpacing: '-0.01em', lineHeight: 1.1 }}>
-            Four modules over <span style={{ color: 'var(--accent-blue)' }}>10–14 weeks</span>
+            Two stages of the Pilot over <span style={{ color: 'var(--accent-blue)' }}>10–14 weeks</span>
           </h1>
         </div>
         <span className="toloka-pill orange">
